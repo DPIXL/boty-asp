@@ -1,0 +1,78 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <TargetFramework>net9.0</TargetFramework>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <RootNamespace>boty_asp</RootNamespace>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <_ContentIncludedByDefault Remove="wwwroot\css\img\01.png" />
+      <_ContentIncludedByDefault Remove="wwwroot\css\img\02.png" />
+      <_ContentIncludedByDefault Remove="wwwroot\css\img\03-01.png" />
+      <_ContentIncludedByDefault Remove="wwwroot\css\img\6.png" />
+      <_ContentIncludedByDefault Remove="wwwroot\css\img\6.svg" />
+      <_ContentIncludedByDefault Remove="wwwroot\css\img\8.png" />
+      <_ContentIncludedByDefault Remove="wwwroot\css\img\8.svg" />
+      <_ContentIncludedByDefault Remove="wwwroot\css\img\billboard.png" />
+      <_ContentIncludedByDefault Remove="wwwroot\css\img\emailbanner.png" />
+      <_ContentIncludedByDefault Remove="wwwroot\css\img\facebook.png" />
+      <_ContentIncludedByDefault Remove="wwwroot\css\img\facebook.svg" />
+      <_ContentIncludedByDefault Remove="wwwroot\css\img\Group 153.png" />
+      <_ContentIncludedByDefault Remove="wwwroot\css\img\Group 153.svg" />
+      <_ContentIncludedByDefault Remove="wwwroot\css\img\Group 169.png" />
+      <_ContentIncludedByDefault Remove="wwwroot\css\img\Group 169.svg" />
+      <_ContentIncludedByDefault Remove="wwwroot\css\img\Group 171.png" />
+      <_ContentIncludedByDefault Remove="wwwroot\css\img\Group 171.svg" />
+      <_ContentIncludedByDefault Remove="wwwroot\css\img\Group 195.png" />
+      <_ContentIncludedByDefault Remove="wwwroot\css\img\Group 195.svg" />
+      <_ContentIncludedByDefault Remove="wwwroot\css\img\Group 196.png" />
+      <_ContentIncludedByDefault Remove="wwwroot\css\img\Group 196.svg" />
+      <_ContentIncludedByDefault Remove="wwwroot\css\img\Group 293.png" />
+      <_ContentIncludedByDefault Remove="wwwroot\css\img\Group 293.svg" />
+      <_ContentIncludedByDefault Remove="wwwroot\css\img\Group 295.png" />
+      <_ContentIncludedByDefault Remove="wwwroot\css\img\Group 295.svg" />
+      <_ContentIncludedByDefault Remove="wwwroot\css\img\Group 4.png" />
+      <_ContentIncludedByDefault Remove="wwwroot\css\img\Group 4.svg" />
+      <_ContentIncludedByDefault Remove="wwwroot\css\img\Group 6.png" />
+      <_ContentIncludedByDefault Remove="wwwroot\css\img\heart.png" />
+      <_ContentIncludedByDefault Remove="wwwroot\css\img\heart.svg" />
+      <_ContentIncludedByDefault Remove="wwwroot\css\img\key.png" />
+      <_ContentIncludedByDefault Remove="wwwroot\css\img\key.svg" />
+      <_ContentIncludedByDefault Remove="wwwroot\css\img\kosik_white.png" />
+      <_ContentIncludedByDefault Remove="wwwroot\css\img\logo_white.png" />
+      <_ContentIncludedByDefault Remove="wwwroot\css\img\loupe.png" />
+      <_ContentIncludedByDefault Remove="wwwroot\css\img\loupe.svg" />
+      <_ContentIncludedByDefault Remove="wwwroot\css\img\mail-tinted.png" />
+      <_ContentIncludedByDefault Remove="wwwroot\css\img\profile-user.png" />
+      <_ContentIncludedByDefault Remove="wwwroot\css\img\profile-user.svg" />
+      <_ContentIncludedByDefault Remove="wwwroot\css\img\Thumbs.db" />
+      <_ContentIncludedByDefault Remove="wwwroot\css\img\twitter.png" />
+      <_ContentIncludedByDefault Remove="wwwroot\css\img\twitter.svg" />
+      <_ContentIncludedByDefault Remove="wwwroot\css\img2\10e0f753-ec99-11eb-9461-02420a000b04.png" />
+      <_ContentIncludedByDefault Remove="wwwroot\css\img2\15146773-eb93-11eb-9461-02420a000b04.png" />
+      <_ContentIncludedByDefault Remove="wwwroot\css\img2\20c2c89d-ae92-11ec-b9bd-02420a000a27.png" />
+      <_ContentIncludedByDefault Remove="wwwroot\css\img2\2930e14d-da4b-11eb-8d3f-02420a000b23.png" />
+      <_ContentIncludedByDefault Remove="wwwroot\css\img2\5a358f8ad37329.3086527515134595948661.png" />
+      <_ContentIncludedByDefault Remove="wwwroot\css\img2\79ec4063-e3fd-11eb-8d3f-02420a000b23.png" />
+      <_ContentIncludedByDefault Remove="wwwroot\css\img2\7c895c56-e3fd-11eb-8d3f-02420a000b23.png" />
+      <_ContentIncludedByDefault Remove="wwwroot\css\img2\8291fafa-e3fd-11eb-8d3f-02420a000b23.png" />
+      <_ContentIncludedByDefault Remove="wwwroot\css\img2\a09dbd19-0357-11ec-a9ba-02420a000a40.png" />
+      <_ContentIncludedByDefault Remove="wwwroot\css\img2\a58593ea-26cb-11ed-842e-02420a000a33.png" />
+      <_ContentIncludedByDefault Remove="wwwroot\css\img2\bota1.png" />
+      <_ContentIncludedByDefault Remove="wwwroot\css\img2\bota2.png" />
+      <_ContentIncludedByDefault Remove="wwwroot\css\img2\bota3.png" />
+      <_ContentIncludedByDefault Remove="wwwroot\css\img2\bota4.png" />
+      <_ContentIncludedByDefault Remove="wwwroot\css\img2\bota5.png" />
+      <_ContentIncludedByDefault Remove="wwwroot\css\img2\child.png" />
+      <_ContentIncludedByDefault Remove="wwwroot\css\img2\logo.webp" />
+      <_ContentIncludedByDefault Remove="wwwroot\css\img2\Thumbs.db" />
+      <_ContentIncludedByDefault Remove="wwwroot\css\site.css" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="9.0.11" />
+    </ItemGroup>
+
+</Project>
