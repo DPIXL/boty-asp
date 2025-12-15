@@ -1,0 +1,33 @@
+﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+
+namespace boty_asp.Models
+{
+    public class Product
+    {
+        [Key]
+        public int Id { get; set; }
+
+        [Required]
+        public string Name { get; set; }
+
+        public string Description { get; set; }
+
+        [Column(TypeName = "decimal(15, 2)")]
+        public decimal BasePrice { get; set; }
+
+        [Column(TypeName = "decimal(5, 2)")]
+        public decimal? DiscountPercent { get; set; }
+
+        [Column(TypeName = "decimal(5, 2)")]
+        public decimal? DPH { get; set; } 
+
+        public string ImagesPath { get; set; }
+
+        public bool IsActive { get; set; }
+
+        public virtual ICollection<ProductCategory> ProductCategories { get; set; } = new List<ProductCategory>();
+        public virtual ICollection<ProductVariant> ProductVariants { get; set; } = new List<ProductVariant>();
+    }
+}
