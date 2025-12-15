@@ -3,7 +3,7 @@ using boty_asp.Models;
 
 namespace boty_asp.Controllers;
 
-public class LoginController : Controller
+public class AdminLoginController : Controller
 {
     // GET
     public IActionResult Index()

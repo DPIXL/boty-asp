@@ -7,6 +7,8 @@ namespace boty_asp.Controllers;
 public class HomeController : Controller
 {
     private readonly ILogger<HomeController> _logger;
+    
+    MyContext _context = new MyContext();
 
     public HomeController(ILogger<HomeController> logger)
     {
