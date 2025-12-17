@@ -15,9 +15,10 @@ public class HomeController : Controller
         _logger = logger;
     }
 
-    public IActionResult Index()
-    {
-        return View();
+    public IActionResult Index() {
+        var products = _context.Products.Where(i => i.Id <= 8).ToList();
+        
+        return View(products);
     }
 
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

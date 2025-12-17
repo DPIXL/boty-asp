@@ -1,4 +1,7 @@
-﻿<section class="billboard">
+﻿@{
+    @model IEnumerable<boty_asp.Models.Product>
+}
+<section class="billboard">
     <span class="gridhelper">
     <div class="billcontent">
         <h2>NOVÁ DÍVČÍ KOLEKCE ŠETRNÁ K DĚTSKÝM NOHÁM</h2>
@@ -19,7 +22,7 @@
 <section class="categories">
     <a href=""><img src="~/img/01.png" alt="kluk"><p>KLUČIČÍ<br>BOTY</p></a>
     <a href=""><img src="~/img/02.png" alt="holka"><p>DÍVČÍ BOTY</p></a>
-    <a href=""><img src="~/img/03-01.png" alt="boty"><p>JAK SPRÁVNĚ<br>VYBRAT?</p></a>
+    <a href=""><img src="~/img/03-01.png" alt="boty"><p>JAK SPRÁVNĚ<br>VYBRAT? @ViewBag.Debug</p></a>
 </section>
 
 <div class="feet"><img src="~/img/Group 295.png" alt="logo"></div>
@@ -30,70 +33,18 @@
     </section>
 
     <section class="items">
-        <a href="Product">
-            <img src="~/img2/15146773-eb93-11eb-9461-02420a000b04.png" alt="boty">
-            <p>Papučky barefoot hnědé kožené</p>
-            <span class="bottom">
-            <span class="bottomtext"><p class="cena">529 Kč</p><p class="cena2">699 Kč</p></span>
-            <img class="kosik" src="~/img/Group 6.png" alt="kosik">
-            </span>
-        </a>
-        <a href="Product">
-            <img src="~/img2/79ec4063-e3fd-11eb-8d3f-02420a000b23.png" alt="boty">
-            <p>Papučky barefoot růžové</p>
-            <span class="bottom">
-            <span class="bottomtext"><p class="cena">529 Kč</p><p class="cena2">699 Kč</p></span>
-            <img class="kosik" src="~/img/Group 6.png" alt="kosik">
-            </span>
-        </a>
-        <a href="Product">
-            <img src="~/img2/7c895c56-e3fd-11eb-8d3f-02420a000b23.png" alt="boty">
-            <p>Sandálky modré umělé</p>
-            <span class="bottom">
-            <span class="bottomtext"><p class="cena">529 Kč</p><p class="cena2">699 Kč</p></span>
-            <img class="kosik" src="~/img/Group 6.png" alt="kosik">
-            </span>
-        </a>
-        <a href="Product">
-            <img src="~/img2/8291fafa-e3fd-11eb-8d3f-02420a000b23.png" alt="boty">
-            <p>Netlačící boty s vysokou špičkou</p>
-            <span class="bottom">
-            <span class="bottomtext"><p class="cena">529 Kč</p><p class="cena2">699 Kč</p></span>
-            <img class="kosik" src="~/img/Group 6.png" alt="kosik">
-            </span>
-        </a>
-        <a href="Product">
-            <img src="~/img2/15146773-eb93-11eb-9461-02420a000b04.png" alt="boty">
-            <p>Papučky barefoot hnědé kožené</p>
-            <span class="bottom">
-            <span class="bottomtext"><p class="cena">529 Kč</p><p class="cena2">699 Kč</p></span>
-            <img class="kosik" src="~/img/Group 6.png" alt="kosik">
-            </span>
-        </a>
-        <a href="Product">
-            <img src="~/img2/15146773-eb93-11eb-9461-02420a000b04.png" alt="boty">
-            <p>Papučky barefoot hnědé kožené</p>
-            <span class="bottom">
-            <span class="bottomtext"><p class="cena">529 Kč</p><p class="cena2">699 Kč</p></span>
-            <img class="kosik" src="~/img/Group 6.png" alt="kosik">
-            </span>
-        </a>
-        <a href="Product">
-            <img src="~/img2/7c895c56-e3fd-11eb-8d3f-02420a000b23.png" alt="boty">
-            <p>Sandálky modré umělé</p>
-            <span class="bottom">
-            <span class="bottomtext"><p class="cena">529 Kč</p><p class="cena2">699 Kč</p></span>
-            <img class="kosik" src="~/img/Group 6.png" alt="kosik">
-            </span>
-        </a>
-        <a href="Product">
-            <img src="~/img2/8291fafa-e3fd-11eb-8d3f-02420a000b23.png" alt="boty">
-            <p>Netlačící boty s vysokou špičkou</p>
-            <span class="bottom">
-            <span class="bottomtext"><p class="cena">529 Kč</p><p class="cena2">699 Kč</p></span>
-            <img class="kosik" src="~/img/Group 6.png" alt="kosik">
-            </span>
-        </a>
+        @foreach(var item in Model) {
+            <a href="Product">
+                <img src="@(Url.Content(item.ImagesPath) + "/0.png")" alt="boty">
+                <p>@item.Name</p>
+                <span class="bottom">
+                    <span class="bottomtext">
+                        <p class="cena">@(Math.Round((item.BasePrice + (item.BasePrice * (item.DPH??0m))) * (1 - (item.DiscountPercent??0m)))) Kč</p>
+                        <p class="cena2">@(Math.Round(item.BasePrice + (item.BasePrice * (item.DPH??0m)))) Kč</p></span>
+                    <img class="kosik" src="~/img/Group 6.png" alt="kosik">
+                </span>
+            </a>
+        }
     </section>
 
     <a href="Order" class="celanabidkabutton">zobrazit celou nabídku</a>
@@ -127,12 +78,12 @@
     <h1>Nezmeškejte nové a výhodné akce</h1>
     <h2>Zadejte svůj e-mailem a obratem vám zašleme PDF s inspirací zdarma.</h2>
     <form action="newsletter.php">
-    <span class="emailline">
-        <label>
-            <img class="emailpic" src="~/img/mail-tinted.png" alt="mail">
-        <input name="emailinput" type="email" required placeholder="Zadej svůj email...">
-        </label>
-    <button class="subscribebtn" type="submit"> přihlásit</button>
-    </span>
+        <span class="emailline">
+            <label>
+                <img class="emailpic" src="~/img/mail-tinted.png" alt="mail">
+                <input name="emailinput" type="email" required placeholder="Zadej svůj email...">
+            </label>
+            <button class="subscribebtn" type="submit"> přihlásit</button>
+        </span>
     </form>
 </footer>

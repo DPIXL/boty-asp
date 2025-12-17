@@ -32,6 +32,8 @@ p {
   a {
     color: white;
     text-decoration: none;
+    flex-direction: row;
+    display: flex;
   }
   a:hover {
     color: white;
@@ -143,9 +145,11 @@ p {
 
   }
 
-  p:hover {
-    color: #c7232f;
-    text-decoration: underline;
+  a:hover {
+    p {
+      color: #c7232f;
+      text-decoration: underline;
+    }
   }
 }
 
