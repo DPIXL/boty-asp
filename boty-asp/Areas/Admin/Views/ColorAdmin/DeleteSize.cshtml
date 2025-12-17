@@ -1,4 +1,4 @@
-@model boty_asp.Models.Color
+﻿@model boty_asp.Models.Size
 
 @{
     ViewData["Title"] = "Delete Product";
@@ -16,24 +16,16 @@
 </div>
 
 <div>
-    <h4>@Model.Name</h4>
+    <h4>Size: @Model.SizeValue</h4>
     <hr />
-    <dl class="row">
-        <dt class="col-sm-2">
-            Hex Code
-        </dt>
-        <dd class="col-sm-10">
-            @Model.HexCode
-        </dd>
-    </dl>
     
-    <form asp-action="Delete1">
+    <form asp-action="Delete2">
         <input type="hidden" asp-for="Id" />
         
         <a asp-action="Index" class="btn btn-secondary rounded-3">Cancel</a>
         <input type="submit" value="Delete" class="@cancel" />
-        @if (Model.ProductVariants.Any()) {
-            <p class="alert alert-danger mt-5">You cannot delete this item, because another item is currently using it.</p>
-        }
+            @if (Model.ProductVariants.Any()) {
+                <p class="alert alert-danger mt-5">You cannot delete this item, because another item is currently using it.</p>
+            }
     </form>
 </div>
