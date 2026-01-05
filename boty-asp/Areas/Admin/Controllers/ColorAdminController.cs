@@ -1,4 +1,5 @@
 using boty_asp.Areas.Admin.ViewModels;
+using boty_asp.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
@@ -83,6 +84,60 @@ public class ColorAdminController : Controller {
             _context.SaveChanges();
         }
     
+        return RedirectToAction(nameof(Index));
+    }
+
+    [Area("Admin")]
+    public IActionResult CreateColor() {
+        return View();
+    }
+
+    [Area("Admin")]
+    [HttpPost, ActionName("Create1")]
+    public async Task<IActionResult> CreateColorToDb(Color color) {
+        _context.Colors.Add(color);
+        await _context.SaveChangesAsync();
+        return RedirectToAction(nameof(Index));
+    }
+    
+    [Area("Admin")]
+    public IActionResult CreateSize() {
+        return View();
+    }
+
+    [Area("Admin")]
+    [HttpPost, ActionName("Create2")]
+    public async Task<IActionResult> CreateSizeToDb(Size size) {
+        _context.Sizes.Add(size);
+        await _context.SaveChangesAsync();
+        return RedirectToAction(nameof(Index));
+    }
+
+    [Area("Admin")]
+    public IActionResult EditColor(int? id) {
+        var col = _context.Colors.Find(id);
+        return View(col);
+    }
+
+    [Area("Admin")]
+    [HttpPost,  ActionName("Edit1")]
+    public async Task<IActionResult> EditColorToDb(Color color) {
+        _context.Colors.Update(color);
+        await _context.SaveChangesAsync();
+        return RedirectToAction(nameof(Index));
+    }
+    
+    [Area("Admin")]
+    public IActionResult EditSize(int? id) {
+        var size = _context.Sizes.Find(id);
+        return View(size);
+    }
+
+    [Area("Admin")]
+    [HttpPost,  ActionName("Edit2")]
+    public async Task<IActionResult> EditSizeToDb(Size size) {
+        _context.Sizes.Update(size);
+        await _context.SaveChangesAsync();
         return RedirectToAction(nameof(Index));
     }
 }

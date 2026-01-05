@@ -1,0 +1,38 @@
+@model boty_asp.Models.Color
+
+@{
+    ViewData["Title"] = "Create Color";
+}
+
+<h1>Create Color</h1>
+
+<hr />
+<div class="row">
+    <div class="col-md-6">
+        <form asp-action="Create1">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+            <div class="form-group mb-3">
+                <label asp-for="Name" class="control-label"></label>
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+
+            <div class="form-group mb-3">
+                <label asp-for="HexCode" class="control-label">Color</label>
+                <input type="color" asp-for="HexCode" class ="form-control form-control-color">
+                </input>
+                <span asp-validation-for="HexCode" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-success rounded-pill" />
+                <a asp-action="Index" class="btn btn-secondary rounded-3">Back to List</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

@@ -1,32 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\PATEJDLSTEPAN\\RiderProjects\\boty-asp\\boty-asp\\boty-asp.csproj": {}
+    "/home/dedpixl/RiderProjects/boty-asp/boty-asp/boty-asp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\PATEJDLSTEPAN\\RiderProjects\\boty-asp\\boty-asp\\boty-asp.csproj": {
+    "/home/dedpixl/RiderProjects/boty-asp/boty-asp/boty-asp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\PATEJDLSTEPAN\\RiderProjects\\boty-asp\\boty-asp\\boty-asp.csproj",
+        "projectUniqueName": "/home/dedpixl/RiderProjects/boty-asp/boty-asp/boty-asp.csproj",
         "projectName": "boty-asp",
-        "projectPath": "C:\\Users\\PATEJDLSTEPAN\\RiderProjects\\boty-asp\\boty-asp\\boty-asp.csproj",
-        "packagesPath": "C:\\Users\\PATEJDLSTEPAN\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\PATEJDLSTEPAN\\RiderProjects\\boty-asp\\boty-asp\\obj\\",
+        "projectPath": "/home/dedpixl/RiderProjects/boty-asp/boty-asp/boty-asp.csproj",
+        "packagesPath": "/home/dedpixl/.nuget/packages/",
+        "outputPath": "/home/dedpixl/RiderProjects/boty-asp/boty-asp/obj/",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\PATEJDLSTEPAN\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/home/dedpixl/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net9.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "\\\\kacenka\\Images\\VS_Nuget\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -79,7 +72,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.301/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/home/dedpixl/.dotnet/sdk/9.0.308/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

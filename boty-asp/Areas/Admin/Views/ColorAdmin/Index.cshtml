@@ -4,7 +4,7 @@
 <span class="col-md-6">
     <div class="d-flex justify-content-between align-items-center mb-3">
         <h2>Manage Colors</h2>
-        <a asp-action="Create" class="btn btn-success rounded-pill">+ Add New Color</a>
+        <a asp-action="CreateColor" class="btn btn-success rounded-pill">+ Add New Color</a>
     </div>
 
     <table class="table">
@@ -25,7 +25,7 @@
                     <strong>@item.HexCode</strong>
                 </td>
                 <td style="width: 1%; white-space: nowrap;" class="text-end">
-                    <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-sm btn-warning rounded-pill">
+                    <a asp-action="EditColor" asp-route-id="@item.Id" class="btn btn-sm btn-warning rounded-pill">
                         Edit
                     </a>
 
@@ -41,7 +41,7 @@
 <span class="col-md-6">
     <div class="d-flex justify-content-between align-items-center mb-3">
         <h2>Manage Sizes</h2>
-        <a asp-action="Create" class="btn btn-success rounded-pill">+ Add New Size</a>
+        <a asp-action="CreateSize" class="btn btn-success rounded-pill">+ Add New Size</a>
     </div>
 
     <table class="table">
@@ -58,7 +58,7 @@
                     <strong>@item.SizeValue</strong>
                 </td>
                 <td style="width: 1%; white-space: nowrap;" class="text-end">
-                    <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-sm btn-warning rounded-pill">
+                    <a asp-action="EditSize" asp-route-id="@item.Id" class="btn btn-sm btn-warning rounded-pill">
                         Edit
                     </a>
 

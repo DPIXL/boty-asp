@@ -1,5 +1,5 @@
 ﻿@{
-    string navstyle = "btn btn-primary rounded-4 fw-bolder";
+    string navstyle = "btn btn-primary rounded-4 fw-bolder flex-grow-1";
 }
 <!DOCTYPE html>
 <html lang="en">
@@ -14,10 +14,12 @@
 </head>
 <body class="p-3">
 
-<nav class="nav nav-justified gap-xl-5 bg-secondary-subtle rounded p-3">
-    <a class="@navstyle" asp-area="Admin" asp-controller="ProductAdmin" asp-action="Index">Products</a>
-    <a class="@navstyle" asp-area="Admin" asp-controller="CategoryAdmin" asp-action="Index">Categories</a>
-    <a class="@navstyle" asp-area="Admin" asp-controller="ColorAdmin" asp-action="Index">Colors and Sizes</a>
+<nav class="navbar navbar-light bg-light gap-xl-5 bg-secondary-subtle rounded p-3">
+    <div class="container-fluid d-flex justify-content-between gap-5">
+        <a class="@navstyle" asp-area="Admin" asp-controller="ProductAdmin" asp-action="Index">Products</a>
+        <a class="@navstyle" asp-area="Admin" asp-controller="CategoryAdmin" asp-action="Index">Categories</a>
+        <a class="@navstyle" asp-area="Admin" asp-controller="ColorAdmin" asp-action="Index">Colors and Sizes</a>
+    </div>
 </nav>
 
 <hr class="my-4 border-2">

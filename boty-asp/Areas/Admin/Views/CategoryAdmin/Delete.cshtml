@@ -1,0 +1,33 @@
+@model boty_asp.Models.Category
+
+@{
+    ViewData["Title"] = "Delete Category";
+    
+    string cancel = "btn btn-danger rounded-pill ";
+
+    if (Model.Products.Any()) {
+        cancel += "disabled";
+    }
+}
+
+<h3>Are you sure you want to delete this?</h3>
+<div class="alert alert-danger">
+    <strong>Warning:</strong> This action cannot be undone.
+</div>
+
+<div>
+    <h4>@Model.Name</h4>
+    <hr />
+    <dl class="row">
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="Id" />
+        
+        <a asp-action="Index" class="btn btn-secondary rounded-3">Cancel</a>
+        <input type="submit" value="Delete" class="@cancel" />
+        @if (Model.Products.Any() || Model.Categories.Any()) {
+            <p class="alert alert-danger mt-5">You cannot delete this item, because another item is currently using it.</p>
+        }
+    </form>
+</div>

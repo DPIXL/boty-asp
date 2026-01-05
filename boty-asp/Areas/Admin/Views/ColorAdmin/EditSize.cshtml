@@ -1,0 +1,32 @@
+@model boty_asp.Models.Size
+
+@{
+    ViewData["Title"] = "Create Size " + @Model.Id;
+}
+
+<h1>Edit Size @Model.Id</h1>
+
+<hr />
+<div class="row">
+    <div class="col-md-6">
+        <form asp-action="Edit2">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id"/>
+
+            <div class="form-group mb-3">
+                <label asp-for="SizeValue" class="control-label">Size</label>
+                <input asp-for="SizeValue" type="number" min="16" max="48" class="form-control" />
+                <span asp-validation-for="SizeValue" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <input type="submit" value="Edit" class="btn btn-warning rounded-pill" />
+                <a asp-action="Index" class="btn btn-secondary rounded-3">Back to List</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

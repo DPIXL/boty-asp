@@ -17,7 +17,8 @@ namespace boty_asp.Models
         [ForeignKey(nameof(ParentId))]
         public virtual Category Parent { get; set; }
         
-        // Navigation property
-        public virtual ICollection<ProductCategory> ProductCategories { get; set; } = new List<ProductCategory>();
+        public virtual ICollection<Category> Categories { get; set; } = new List<Category>();
+        public virtual ICollection<Product> Products { get; set; } = new List<Product>();
+
     }
 }

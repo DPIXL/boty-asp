@@ -26,8 +26,11 @@ namespace boty_asp.Models
         public string ImagesPath { get; set; }
 
         public bool IsActive { get; set; }
-
-        public virtual ICollection<ProductCategory> ProductCategories { get; set; } = new List<ProductCategory>();
+        
+        public int CategoryId { get; set; }
+        [ForeignKey(nameof(CategoryId))]
+        public virtual Category Category { get; set; }
+        
         public virtual ICollection<ProductVariant> ProductVariants { get; set; } = new List<ProductVariant>();
     }
 }

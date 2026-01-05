@@ -10,7 +10,6 @@ public class MyContext : DbContext {
     public DbSet<Color> Colors { get; set; }
     public DbSet<Size> Sizes { get; set; }
     public DbSet<Product> Products { get; set; }
-    public DbSet<ProductCategory> ProductCategories { get; set; }
     public DbSet<ProductVariant> ProductVariants { get; set; }
     public DbSet<Order> Orders { get; set; }
     public DbSet<OrderItem> OrderItems { get; set; }
@@ -23,8 +22,7 @@ public class MyContext : DbContext {
         base.OnModelCreating(modelBuilder);
 
         // 1. Composite Key for ProductCategories
-        modelBuilder.Entity<ProductCategory>()
-            .HasKey(pc => new { pc.ProductId, pc.CategoryId });
+
 
         // 2. Map 'SizeValue' property to 'Size' column
         modelBuilder.Entity<Size>()
