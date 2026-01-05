@@ -1,0 +1,49 @@
+@model boty_asp.Models.ProductVariant
+
+@{
+    ViewData["Title"] = "Add Item";
+}
+
+<h1>Add Item</h1>
+
+<hr />
+<div class="row">
+    <div class="col-md-6">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            
+            <input type="hidden" asp-for="ProductId"/>
+
+            <div class="form-group mb-3">
+                <label asp-for="ColorId" class="control-label">Color</label>
+                <select asp-for="ColorId" class ="form-control" asp-items="ViewBag.Colors">
+                    <option value="" disabled selected>-- Select a Color --</option>
+                </select>
+                <span asp-validation-for="ColorId" class="text-danger"></span>
+            </div>
+            
+            <div class="form-group mb-3">
+                <label asp-for="SizeId" class="control-label">Size</label>
+                <select asp-for="SizeId" class ="form-control" asp-items="ViewBag.Sizes">
+                    <option value="" disabled selected>-- Select a Size --</option>
+                </select>
+                <span asp-validation-for="SizeId" class="text-danger"></span>
+            </div>
+            
+            <div class="form-group mb-3">
+                <label asp-for="StockQuantity" class="control-label"></label>
+                <input type="number" min="0" asp-for="StockQuantity" class="form-control" />
+                <span asp-validation-for="StockQuantity" class="text-danger"></span>
+            </div>
+            
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-success rounded-pill" />
+                <a asp-action="Index" asp-route-id="@ViewBag.ProductId" class="btn btn-secondary rounded-3">Back to List</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

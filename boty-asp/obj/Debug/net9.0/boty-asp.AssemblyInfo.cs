@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("boty-asp")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+979b3a77f37bc2e995c0171d1ec7e6bae6e82692")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6db5defeb9028ce27971a97b7de40039fa8a1e6f")]
 [assembly: System.Reflection.AssemblyProductAttribute("boty-asp")]
 [assembly: System.Reflection.AssemblyTitleAttribute("boty-asp")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

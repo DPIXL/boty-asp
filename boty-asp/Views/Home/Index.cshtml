@@ -34,7 +34,7 @@
 
     <section class="items">
         @foreach(var item in Model) {
-            <a href="Product">
+            <a asp-controller="Product" asp-action="Index" asp-route-id="@item.Id">
                 <img src="@(Url.Content(item.ImagesPath) + "/0.png")" alt="boty">
                 <p>@item.Name</p>
                 <span class="bottom">

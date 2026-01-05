@@ -84,4 +84,9 @@
       <Folder Include="wwwroot\dbimg\0\" />
     </ItemGroup>
 
+    <ItemGroup>
+      <AdditionalFiles Include="Areas\Admin\Views\ProductVariantAdmin\Delete.cshtml" />
+      <AdditionalFiles Include="Areas\Admin\Views\ProductVariantAdmin\Index.cshtml" />
+    </ItemGroup>
+
 </Project>
