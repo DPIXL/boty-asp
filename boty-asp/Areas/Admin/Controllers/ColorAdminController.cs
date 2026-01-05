@@ -76,11 +76,11 @@ public class ColorAdminController : Controller {
     [HttpPost, ActionName("Delete2")]
     public IActionResult Delete2(int id)
     {
-        var color = _context.Colors.Find(id);
+        var size = _context.Sizes.Find(id);
     
-        if (color != null)
+        if (size != null)
         {
-            _context.Colors.Remove(color); 
+            _context.Sizes.Remove(size); 
             _context.SaveChanges();
         }
     

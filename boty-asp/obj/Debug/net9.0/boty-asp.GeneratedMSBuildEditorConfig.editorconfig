@@ -17,153 +17,157 @@ build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = boty_asp
 build_property.RootNamespace = boty_asp
-build_property.ProjectDir = /home/dedpixl/RiderProjects/boty-asp/boty-asp/
+build_property.ProjectDir = C:\Users\patejdlstepan\RiderProjects\boty-asp\boty-asp\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 9.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = /home/dedpixl/RiderProjects/boty-asp/boty-asp
+build_property.MSBuildProjectDirectory = C:\Users\patejdlstepan\RiderProjects\boty-asp\boty-asp
 build_property._RazorSourceGeneratorDebug = 
 build_property.EffectiveAnalysisLevelStyle = 9.0
 build_property.EnableCodeStyleSeverity = 
 
-[/home/dedpixl/RiderProjects/boty-asp/boty-asp/Areas/Admin/Views/ProductVariantAdmin/Delete.cshtml]
+[C:/Users/patejdlstepan/RiderProjects/boty-asp/boty-asp/Areas/Admin/Views/ProductVariantAdmin/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = 
-build_metadata.AdditionalFiles.TargetPath = QXJlYXMvQWRtaW4vVmlld3MvUHJvZHVjdFZhcmlhbnRBZG1pbi9EZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUHJvZHVjdFZhcmlhbnRBZG1pblxEZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/dedpixl/RiderProjects/boty-asp/boty-asp/Areas/Admin/Views/ProductVariantAdmin/Index.cshtml]
+[C:/Users/patejdlstepan/RiderProjects/boty-asp/boty-asp/Areas/Admin/Views/ProductVariantAdmin/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = 
-build_metadata.AdditionalFiles.TargetPath = QXJlYXMvQWRtaW4vVmlld3MvUHJvZHVjdFZhcmlhbnRBZG1pbi9JbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUHJvZHVjdFZhcmlhbnRBZG1pblxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/dedpixl/RiderProjects/boty-asp/boty-asp/Areas/Admin/Views/CategoryAdmin/Create.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXMvQWRtaW4vVmlld3MvQ2F0ZWdvcnlBZG1pbi9DcmVhdGUuY3NodG1s
+[C:/Users/patejdlstepan/RiderProjects/boty-asp/boty-asp/Areas/Admin/Views/CategoryAdmin/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ2F0ZWdvcnlBZG1pblxDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/dedpixl/RiderProjects/boty-asp/boty-asp/Areas/Admin/Views/CategoryAdmin/Delete.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXMvQWRtaW4vVmlld3MvQ2F0ZWdvcnlBZG1pbi9EZWxldGUuY3NodG1s
+[C:/Users/patejdlstepan/RiderProjects/boty-asp/boty-asp/Areas/Admin/Views/CategoryAdmin/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ2F0ZWdvcnlBZG1pblxEZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/dedpixl/RiderProjects/boty-asp/boty-asp/Areas/Admin/Views/CategoryAdmin/Edit.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXMvQWRtaW4vVmlld3MvQ2F0ZWdvcnlBZG1pbi9FZGl0LmNzaHRtbA==
+[C:/Users/patejdlstepan/RiderProjects/boty-asp/boty-asp/Areas/Admin/Views/CategoryAdmin/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ2F0ZWdvcnlBZG1pblxFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/dedpixl/RiderProjects/boty-asp/boty-asp/Areas/Admin/Views/CategoryAdmin/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXMvQWRtaW4vVmlld3MvQ2F0ZWdvcnlBZG1pbi9JbmRleC5jc2h0bWw=
+[C:/Users/patejdlstepan/RiderProjects/boty-asp/boty-asp/Areas/Admin/Views/CategoryAdmin/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ2F0ZWdvcnlBZG1pblxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/dedpixl/RiderProjects/boty-asp/boty-asp/Areas/Admin/Views/ColorAdmin/CreateColor.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXMvQWRtaW4vVmlld3MvQ29sb3JBZG1pbi9DcmVhdGVDb2xvci5jc2h0bWw=
+[C:/Users/patejdlstepan/RiderProjects/boty-asp/boty-asp/Areas/Admin/Views/ColorAdmin/CreateColor.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ29sb3JBZG1pblxDcmVhdGVDb2xvci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/dedpixl/RiderProjects/boty-asp/boty-asp/Areas/Admin/Views/ColorAdmin/CreateSize.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXMvQWRtaW4vVmlld3MvQ29sb3JBZG1pbi9DcmVhdGVTaXplLmNzaHRtbA==
+[C:/Users/patejdlstepan/RiderProjects/boty-asp/boty-asp/Areas/Admin/Views/ColorAdmin/CreateSize.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ29sb3JBZG1pblxDcmVhdGVTaXplLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/dedpixl/RiderProjects/boty-asp/boty-asp/Areas/Admin/Views/ColorAdmin/DeleteColor.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXMvQWRtaW4vVmlld3MvQ29sb3JBZG1pbi9EZWxldGVDb2xvci5jc2h0bWw=
+[C:/Users/patejdlstepan/RiderProjects/boty-asp/boty-asp/Areas/Admin/Views/ColorAdmin/DeleteColor.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ29sb3JBZG1pblxEZWxldGVDb2xvci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/dedpixl/RiderProjects/boty-asp/boty-asp/Areas/Admin/Views/ColorAdmin/DeleteSize.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXMvQWRtaW4vVmlld3MvQ29sb3JBZG1pbi9EZWxldGVTaXplLmNzaHRtbA==
+[C:/Users/patejdlstepan/RiderProjects/boty-asp/boty-asp/Areas/Admin/Views/ColorAdmin/DeleteSize.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ29sb3JBZG1pblxEZWxldGVTaXplLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/dedpixl/RiderProjects/boty-asp/boty-asp/Areas/Admin/Views/ColorAdmin/EditColor.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXMvQWRtaW4vVmlld3MvQ29sb3JBZG1pbi9FZGl0Q29sb3IuY3NodG1s
+[C:/Users/patejdlstepan/RiderProjects/boty-asp/boty-asp/Areas/Admin/Views/ColorAdmin/EditColor.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ29sb3JBZG1pblxFZGl0Q29sb3IuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/dedpixl/RiderProjects/boty-asp/boty-asp/Areas/Admin/Views/ColorAdmin/EditSize.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXMvQWRtaW4vVmlld3MvQ29sb3JBZG1pbi9FZGl0U2l6ZS5jc2h0bWw=
+[C:/Users/patejdlstepan/RiderProjects/boty-asp/boty-asp/Areas/Admin/Views/ColorAdmin/EditSize.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ29sb3JBZG1pblxFZGl0U2l6ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/dedpixl/RiderProjects/boty-asp/boty-asp/Areas/Admin/Views/ColorAdmin/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXMvQWRtaW4vVmlld3MvQ29sb3JBZG1pbi9JbmRleC5jc2h0bWw=
+[C:/Users/patejdlstepan/RiderProjects/boty-asp/boty-asp/Areas/Admin/Views/ColorAdmin/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ29sb3JBZG1pblxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/dedpixl/RiderProjects/boty-asp/boty-asp/Areas/Admin/Views/Home/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXMvQWRtaW4vVmlld3MvSG9tZS9JbmRleC5jc2h0bWw=
+[C:/Users/patejdlstepan/RiderProjects/boty-asp/boty-asp/Areas/Admin/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/dedpixl/RiderProjects/boty-asp/boty-asp/Areas/Admin/Views/ProductAdmin/Create.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXMvQWRtaW4vVmlld3MvUHJvZHVjdEFkbWluL0NyZWF0ZS5jc2h0bWw=
+[C:/Users/patejdlstepan/RiderProjects/boty-asp/boty-asp/Areas/Admin/Views/ProductAdmin/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUHJvZHVjdEFkbWluXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/dedpixl/RiderProjects/boty-asp/boty-asp/Areas/Admin/Views/ProductAdmin/Delete.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXMvQWRtaW4vVmlld3MvUHJvZHVjdEFkbWluL0RlbGV0ZS5jc2h0bWw=
+[C:/Users/patejdlstepan/RiderProjects/boty-asp/boty-asp/Areas/Admin/Views/ProductAdmin/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUHJvZHVjdEFkbWluXERlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/dedpixl/RiderProjects/boty-asp/boty-asp/Areas/Admin/Views/ProductAdmin/Edit.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXMvQWRtaW4vVmlld3MvUHJvZHVjdEFkbWluL0VkaXQuY3NodG1s
+[C:/Users/patejdlstepan/RiderProjects/boty-asp/boty-asp/Areas/Admin/Views/ProductAdmin/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUHJvZHVjdEFkbWluXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/dedpixl/RiderProjects/boty-asp/boty-asp/Areas/Admin/Views/ProductAdmin/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXMvQWRtaW4vVmlld3MvUHJvZHVjdEFkbWluL0luZGV4LmNzaHRtbA==
+[C:/Users/patejdlstepan/RiderProjects/boty-asp/boty-asp/Areas/Admin/Views/ProductAdmin/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUHJvZHVjdEFkbWluXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/dedpixl/RiderProjects/boty-asp/boty-asp/Areas/Admin/Views/ProductVariantAdmin/Create.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXMvQWRtaW4vVmlld3MvUHJvZHVjdFZhcmlhbnRBZG1pbi9DcmVhdGUuY3NodG1s
+[C:/Users/patejdlstepan/RiderProjects/boty-asp/boty-asp/Areas/Admin/Views/ProductVariantAdmin/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUHJvZHVjdFZhcmlhbnRBZG1pblxDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/dedpixl/RiderProjects/boty-asp/boty-asp/Areas/Admin/Views/ProductVariantAdmin/Edit.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXMvQWRtaW4vVmlld3MvUHJvZHVjdFZhcmlhbnRBZG1pbi9FZGl0LmNzaHRtbA==
+[C:/Users/patejdlstepan/RiderProjects/boty-asp/boty-asp/Areas/Admin/Views/ProductVariantAdmin/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUHJvZHVjdFZhcmlhbnRBZG1pblxFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/dedpixl/RiderProjects/boty-asp/boty-asp/Areas/Admin/Views/_ViewImports.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXMvQWRtaW4vVmlld3MvX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+[C:/Users/patejdlstepan/RiderProjects/boty-asp/boty-asp/Areas/Admin/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/dedpixl/RiderProjects/boty-asp/boty-asp/Areas/Admin/Views/_ViewStart.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXMvQWRtaW4vVmlld3MvX1ZpZXdTdGFydC5jc2h0bWw=
+[C:/Users/patejdlstepan/RiderProjects/boty-asp/boty-asp/Areas/Admin/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/dedpixl/RiderProjects/boty-asp/boty-asp/Views/AdminLogin/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWRtaW5Mb2dpbi9JbmRleC5jc2h0bWw=
+[C:/Users/patejdlstepan/RiderProjects/boty-asp/boty-asp/Views/AdminLogin/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5Mb2dpblxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/dedpixl/RiderProjects/boty-asp/boty-asp/Views/Home/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9JbmRleC5jc2h0bWw=
+[C:/Users/patejdlstepan/RiderProjects/boty-asp/boty-asp/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/dedpixl/RiderProjects/boty-asp/boty-asp/Views/Order/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvT3JkZXIvSW5kZXguY3NodG1s
+[C:/Users/patejdlstepan/RiderProjects/boty-asp/boty-asp/Views/Order/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/dedpixl/RiderProjects/boty-asp/boty-asp/Views/Product/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUHJvZHVjdC9JbmRleC5jc2h0bWw=
+[C:/Users/patejdlstepan/RiderProjects/boty-asp/boty-asp/Views/Product/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/dedpixl/RiderProjects/boty-asp/boty-asp/Views/Shared/Error.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL0Vycm9yLmNzaHRtbA==
+[C:/Users/patejdlstepan/RiderProjects/boty-asp/boty-asp/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/dedpixl/RiderProjects/boty-asp/boty-asp/Views/Shared/_Footer.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19Gb290ZXIuY3NodG1s
+[C:/Users/patejdlstepan/RiderProjects/boty-asp/boty-asp/Views/Shared/_Footer.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Gb290ZXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/dedpixl/RiderProjects/boty-asp/boty-asp/Views/Shared/_Header.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19IZWFkZXIuY3NodG1s
+[C:/Users/patejdlstepan/RiderProjects/boty-asp/boty-asp/Views/Shared/_Header.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9IZWFkZXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/dedpixl/RiderProjects/boty-asp/boty-asp/Views/Shared/_ValidationScriptsPartial.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+[C:/Users/patejdlstepan/RiderProjects/boty-asp/boty-asp/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/dedpixl/RiderProjects/boty-asp/boty-asp/Views/_ViewImports.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+[C:/Users/patejdlstepan/RiderProjects/boty-asp/boty-asp/Views/WholeOffer/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcV2hvbGVPZmZlclxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/dedpixl/RiderProjects/boty-asp/boty-asp/Views/_ViewStart.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvX1ZpZXdTdGFydC5jc2h0bWw=
+[C:/Users/patejdlstepan/RiderProjects/boty-asp/boty-asp/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/dedpixl/RiderProjects/boty-asp/boty-asp/Areas/Admin/Views/Shared/_Layout.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXMvQWRtaW4vVmlld3MvU2hhcmVkL19MYXlvdXQuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = b-aijhujwaiv
+[C:/Users/patejdlstepan/RiderProjects/boty-asp/boty-asp/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
 
-[/home/dedpixl/RiderProjects/boty-asp/boty-asp/Views/Shared/_Layout.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19MYXlvdXQuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = b-e4pwj16355
+[C:/Users/patejdlstepan/RiderProjects/boty-asp/boty-asp/Areas/Admin/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-8trtn9jgcs
+
+[C:/Users/patejdlstepan/RiderProjects/boty-asp/boty-asp/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-dzdcy8twee
