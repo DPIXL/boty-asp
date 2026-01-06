@@ -2,11 +2,47 @@
     @model IEnumerable<boty_asp.Models.Product>
 }
 
-<h1>Filtr: </h1>
+<section class="nabidkanahled">
+    <section style="text-align: left; justify-content: left; justify-items: left" class="h1">
+        <h1 style="" id="part2">Filtr:  </h1> 
+        <div class="filter-bar">
+            <form asp-action="Index" method="get">
+                <select name="catId" id="cat-select" asp-items="ViewBag.Categories as SelectList" onchange="this.form.submit()">
+                    <option value="">-- Show All Categories --</option>
+                </select>
+                <select name="colId" id="col-select" asp-items="ViewBag.Colors as SelectList" onchange="this.form.submit()">
+                    <option value="">-- Show All Colors --</option>
+                </select>
+                <select name="sizeId" id="size-select" asp-items="ViewBag.Sizes as SelectList" onchange="this.form.submit()">
+                    <option value="">-- Show All Sizes --</option>
+                </select>
+        
+                <a class="submitbutton" asp-action="Index" class="clear-link">Clear Filter</a>
+            </form>
+        </div>
+    </section>
 
-
-<div class="feethideonmobile"><img src="~/img/Group 295.png" alt="feet"> </div>
-
+    <section class="items">
+        @foreach(var item in Model) {
+            <a asp-controller="Product" asp-action="Index" asp-route-id="@item.Id">
+                <img src="@(Url.Content(item.ImagesPath) + "/0.png")" alt="boty">
+                <p>@item.Name</p>
+                <span class="bottom">
+                    <span class="bottomtext">
+                        <p class="cena">@(Math.Round((item.BasePrice + (item.BasePrice * (item.DPH??0m))) * (1 - (item.DiscountPercent??0m)))) Kč</p>
+                        <p class="cena2">@(Math.Round(item.BasePrice + (item.BasePrice * (item.DPH??0m)))) Kč</p></span>
+                    <img class="kosik" src="~/img/Group 6.png" alt="kosik">
+                </span>
+            </a>
+        }
+    </section>
+    
+    @if (!Model.Any())
+    {
+        <p style="color: #b80000; font-weight: bold">No products found in this category.</p>
+    }
+    
+</section>
 
 <div class="feet"> <img src="~/img/Group 295.png" alt="feet"> </div>
 

@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace boty_asp.Controllers;
 
@@ -10,30 +11,40 @@ public class WholeOfferController : Controller {
     MyContext _context = new MyContext();
     
     // GET
-    public IActionResult Index(int? id) { //Current Category Id, null = all
+    public IActionResult Index(int? catId, int? colId, int? sizeId) { //Current Category Id, null = all
+
+        var products = _context.Products
+            .Include(p => p.ProductVariants).ThenInclude(pv => pv.Color)
+            .Include(p => p.ProductVariants).ThenInclude(pv => pv.Size)
+            .AsQueryable();
         
-        var products = _context.Products.ToList();
-        
-        ViewBag.CurrentCategory = _context.Categories.Find(id);
-        
-        var path = new List<Category>();
-        
-        Category currentCat = _context.Categories.Include(c => c.Products).FirstOrDefault(c => c.Id == id);
-        
-        while (currentCat != null) {
-            
-            path.Add(currentCat);
-            
-            if (currentCat.ParentId != null && currentCat.ParentId != id) {
-                _context.Entry(currentCat).Reference(c => c.Parent).Load();
-            }
-            
-            currentCat = currentCat.Parent;
+        if (catId.HasValue)
+        {
+            products = products.Where(p => p.CategoryId == catId);
         }
-        path.Reverse();
+
+        if (colId.HasValue && sizeId.HasValue)
+        {
+            products = products.Where(p => p.ProductVariants.Any(pv => 
+                pv.ColorId == colId && pv.SizeId == sizeId));
+        }
+        else
+        {
+            if (colId.HasValue)
+            {
+                products = products.Where(p => p.ProductVariants.Any(pv => pv.ColorId == colId));
+            }
+
+            if (sizeId.HasValue)
+            {
+                products = products.Where(p => p.ProductVariants.Any(pv => pv.SizeId == sizeId));
+            }
+        }
         
-        ViewBag.Categories = path;
+        ViewBag.Categories = new SelectList(_context.Categories, "Id", "Name", catId);
+        ViewBag.Colors = new SelectList(_context.Colors, "Id", "Name", colId);
+        ViewBag.Sizes = new SelectList(_context.Sizes, "Id", "SizeValue", sizeId);
         
-        return View();
+        return View(products.ToList());
     }
 }
