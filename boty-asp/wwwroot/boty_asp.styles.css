@@ -195,11 +195,79 @@ p {
   margin-left: 10px;
 }
 
+.filter-bar {
+  display: flex;
+  flex-direction: row;
+  margin-left: 5px;
+  height: 100%;
+  align-items: center;
+  justify-content: left;
+  
+  gap: 20px;
+  
+  h1 {
+    color: #304068;
+  }
+  
+  button {
+    height: 100%;
+    background: #C82331;
+    border: hidden 1px #b3b3b3;
+    color: white;
+    font-weight: bold;
+    border-radius: 50vh;
+    padding: 10px 20px;
+  }
+  
+  button:hover {
+    background: #842029;
+    cursor: pointer;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+  }
+
+  select {
+    display: flex;
+    
+    align-self: center;
+
+    border: 1px solid #b5bfd5;
+    
+    margin: 0;
+    
+    color: #304068;
+
+    background-color: white;
+    padding: 10px 10px;
+    
+    border-radius: 50vh;
+  }
+
+  select:required:invalid {
+    color: #b4bed5;
+  }
+
+  select option {
+    color: black;
+  }
+
+  select:focus {
+    outline: none;
+  }
+}
+
 .nabidkanahled {
 
   justify-content: center;
 
   .h1 {
+    
     font-size: 18px;
     text-align: center;
     justify-items: center;

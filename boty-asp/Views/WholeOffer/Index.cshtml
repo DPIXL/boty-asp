@@ -3,24 +3,23 @@
 }
 
 <section class="nabidkanahled">
-    <section style="text-align: left; justify-content: left; justify-items: left" class="h1">
-        <h1 style="" id="part2">Filtr:  </h1> 
-        <div class="filter-bar">
-            <form asp-action="Index" method="get">
-                <select name="catId" id="cat-select" asp-items="ViewBag.Categories as SelectList" onchange="this.form.submit()">
-                    <option value="">-- Show All Categories --</option>
-                </select>
-                <select name="colId" id="col-select" asp-items="ViewBag.Colors as SelectList" onchange="this.form.submit()">
-                    <option value="">-- Show All Colors --</option>
-                </select>
-                <select name="sizeId" id="size-select" asp-items="ViewBag.Sizes as SelectList" onchange="this.form.submit()">
-                    <option value="">-- Show All Sizes --</option>
-                </select>
+    <div class="filter-bar">
+    <h1 style="" id="part2">Filtr:  </h1>
         
-                <a class="submitbutton" asp-action="Index" class="clear-link">Clear Filter</a>
-            </form>
-        </div>
-    </section>
+        <form asp-action="Index" method="get">
+            <select name="catId" id="cat-select" asp-items="ViewBag.Categories as SelectList" onchange="this.form.submit()">
+                <option value="">-- Všechny Kategorie --</option>
+            </select>
+            <select name="colId" id="col-select" asp-items="ViewBag.Colors as SelectList" onchange="this.form.submit()">
+                <option value="">-- Všechny Barvy --</option>
+            </select>
+            <select name="sizeId" id="size-select" asp-items="ViewBag.Sizes as SelectList" onchange="this.form.submit()">
+                <option value="">-- Všechny Velikosti --</option>
+            </select>
+
+            <button asp-action="Index" class="clear-link">Resetovat</button>
+        </form>
+    </div>
 
     <section class="items">
         @foreach(var item in Model) {
