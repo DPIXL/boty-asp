@@ -6888,23 +6888,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\PATEJDLSTEPAN\\.nuget\\packages\\": {},
+    "C:\\Users\\patejdlstepan\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\PATEJDLSTEPAN\\RiderProjects\\boty-asp\\boty-asp\\boty-asp.csproj",
+      "projectUniqueName": "C:\\Users\\patejdlstepan\\RiderProjects\\boty-asp\\boty-asp\\boty-asp.csproj",
       "projectName": "boty-asp",
-      "projectPath": "C:\\Users\\PATEJDLSTEPAN\\RiderProjects\\boty-asp\\boty-asp\\boty-asp.csproj",
-      "packagesPath": "C:\\Users\\PATEJDLSTEPAN\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\PATEJDLSTEPAN\\RiderProjects\\boty-asp\\boty-asp\\obj\\",
+      "projectPath": "C:\\Users\\patejdlstepan\\RiderProjects\\boty-asp\\boty-asp\\boty-asp.csproj",
+      "packagesPath": "C:\\Users\\patejdlstepan\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\patejdlstepan\\RiderProjects\\boty-asp\\boty-asp\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\PATEJDLSTEPAN\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\patejdlstepan\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],

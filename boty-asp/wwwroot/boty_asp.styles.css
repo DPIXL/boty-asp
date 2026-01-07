@@ -209,17 +209,18 @@ p {
     color: #304068;
   }
   
-  button {
+  a {
     height: 100%;
     background: #C82331;
     border: hidden 1px #b3b3b3;
     color: white;
     font-weight: bold;
+    text-decoration: none;
     border-radius: 50vh;
     padding: 10px 20px;
   }
   
-  button:hover {
+  a:hover {
     background: #842029;
     cursor: pointer;
   }
@@ -296,6 +297,7 @@ p {
     a {
       display: block;
       outline: #b4bed5 solid 1px;
+      border-radius: 1.5rem;
       color: #304068;
       text-decoration: none;
       padding: 5px 12px;
@@ -363,7 +365,8 @@ p {
   }
 
   .celanabidkabutton {
-    display: flex;
+    display: block;
+    flex: none;
     margin-top: 10px;
     margin-bottom: 30px;
     text-align: center;

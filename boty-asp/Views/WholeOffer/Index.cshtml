@@ -6,19 +6,19 @@
     <div class="filter-bar">
     <h1 style="" id="part2">Filtr:  </h1>
         
-        <form asp-action="Index" method="get">
-            <select name="catId" id="cat-select" asp-items="ViewBag.Categories as SelectList" onchange="this.form.submit()">
-                <option value="">-- Všechny Kategorie --</option>
-            </select>
-            <select name="colId" id="col-select" asp-items="ViewBag.Colors as SelectList" onchange="this.form.submit()">
-                <option value="">-- Všechny Barvy --</option>
-            </select>
-            <select name="sizeId" id="size-select" asp-items="ViewBag.Sizes as SelectList" onchange="this.form.submit()">
-                <option value="">-- Všechny Velikosti --</option>
-            </select>
-
-            <button asp-action="Index" class="clear-link">Resetovat</button>
-        </form>
+    <form asp-action="Index" method="get">
+        <select name="catId" id="cat-select" asp-items="ViewBag.Categories as SelectList" onchange="this.form.submit()">
+            <option value="">-- Všechny Kategorie --</option>
+        </select>
+        <select name="colId" id="col-select" asp-items="ViewBag.Colors as SelectList" onchange="this.form.submit()">
+            <option value="">-- Všechny Barvy --</option>
+        </select>
+        <select name="sizeId" id="size-select" asp-items="ViewBag.Sizes as SelectList" onchange="this.form.submit()">
+            <option value="">-- Všechny Velikosti --</option>
+        </select>
+        
+        <a asp-controller="WholeOffer" asp-action="Index" class="clear-link">Resetovat</a>
+    </form>
     </div>
 
     <section class="items">
@@ -38,7 +38,7 @@
     
     @if (!Model.Any())
     {
-        <p style="color: #b80000; font-weight: bold">No products found in this category.</p>
+        <p style="color: #b80000; font-weight: bold">Žádné produkty v této kategorii. :(</p>
     }
     
 </section>
