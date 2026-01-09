@@ -6,7 +6,7 @@ namespace boty_asp.Controllers;
 public class OrderController : Controller
 {
     // GET
-    public IActionResult Index()
+    public IActionResult Index(int? id)
     {
         return View();
     }

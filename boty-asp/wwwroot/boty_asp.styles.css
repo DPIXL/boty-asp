@@ -216,11 +216,13 @@ p {
     color: white;
     font-weight: bold;
     text-decoration: none;
-    border-radius: 50vh;
+    border-radius: 1.5rem;
     padding: 10px 20px;
+    transition: 0.3s ease;
   }
   
   a:hover {
+    border-radius: 0.7rem;
     background: #842029;
     cursor: pointer;
   }
@@ -301,6 +303,12 @@ p {
       color: #304068;
       text-decoration: none;
       padding: 5px 12px;
+      
+      p {
+        transition: font-weight ease 0.3s;
+      }
+
+      transition: outline-width ease 0.05s;
     }
 
     a:hover {
@@ -375,11 +383,14 @@ p {
     background-color: #C7232E;
     justify-self: center;
     padding: 15px 25px;
+    border-radius: 1.5rem;
+    transition: 0.3s ease;
   }
 
   .celanabidkabutton:hover {
     background-color: #81161d;
     text-decoration: underline;
+    border-radius: 0.7rem;
   }
 }
 
@@ -850,20 +861,8 @@ p {
       border-color: #c7232f;
     }
 
-    .col1 {
+    .col {
       background-color: #314069;
-    }
-    .col2 {
-      background-color: #000000;
-    }
-    .col3 {
-      background-color: #C7232E;
-    }
-    .col4 {
-      background-color: #314069;
-    }
-    .col5 {
-      background-color: #ABD373;
     }
 
     display: flex;
@@ -938,9 +937,11 @@ p {
         border: none;
         color: white;
         background-color: #c7232f;
-        padding-right: 30px;
+        padding-right: 15px;
         padding-left: 15px;
         text-decoration: none;
+        border-radius: 1.5rem;
+        transition: 0.3s ease;
 
         p {
           align-self: center;
@@ -959,6 +960,8 @@ p {
       .dokosiku:hover {
         background-color: #81161d;
         text-decoration: underline;
+        border-radius: 0.7rem;
+        cursor: pointer;
       }
     }
 
@@ -1178,10 +1181,13 @@ p {
         background-color: #C7232E;
         justify-self: center;
         padding: 15px 25px;
+        border-radius: 1.5rem;
+        transition: 0.3s ease;
 
       }
 
       .billbutton:hover {
+        border-radius: 0.7rem;
         background-color: #81161d;
         text-decoration: underline;
       }

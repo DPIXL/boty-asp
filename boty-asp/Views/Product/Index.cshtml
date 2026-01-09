@@ -2,10 +2,10 @@
 
 <span class="path"><a asp-controller="Home" asp-action="Index">Domů</a><p>></p>
     @for (int i = 0; i < ViewBag.Categories.Count - 1; i++) {
-        <a href="">@ViewBag.Categories[i].Name</a><p>></p>
-    }<a class="current" href="">@Model.Category.Name</a></span>
+        <a asp-controller="WholeOffer" asp-action="Index" asp-route-catId="@ViewBag.Categories[i].Id">@ViewBag.Categories[i].Name</a><p>></p>
+    }<a class="current" asp-controller="WholeOffer" asp-action="Index" asp-route-catId="@Model.Category.Id">@Model.Category.Name</a></span>
 <div class="product">
-    <form action="order.php">
+    <form asp-action="AddToOrder">
     <span class="grid">
         <span>
     <img src="~/img2/bota1.png" alt="bota">
@@ -24,55 +24,41 @@
     <!-- separator??  -->
 
     <hr>
-
+    @if (Model.ProductVariants.Any()) {    
     <span class="properthelper">
     <span>
     <h3>Barva</h3>
     <span class="colors">
-        <input name="color" type="radio" id="color1" checked="checked">
-        <label for="color1" class="col1"></label>
-        <input name="color" type="radio" id="color2">
-        <label for="color2" class="col2"></label>
-        <input name="color" type="radio" id="color3">
-        <label for="color3" class="col3"></label>
-        <input name="color" type="radio" id="color4">
-        <label for="color4" class="col4"></label>
-        <input name="color" type="radio" id="color5">
-        <label for="color5" class="col5"></label>
+        @foreach (var c in @ViewBag.DistinctColors) {
+            <input name="colId" type="radio" id="color @c.Id" value="@c.Id" onchange="window.location.href = '@Url.Action("Index", new { id = Model.Id })?colorId=' + @c.Id" checked="@(c.Id == ViewBag.SelectedColorId ? "checked" : null)"/>
+            <label style="background-color: @c.HexCode" for="color @c.Id" class="col" ></label>
+        }
 
     </span>
     </span>
     <span>
     <h3>Velikost</h3>
     <span class="sizes">
-        <input name="numero" id="num1" type="radio" checked="checked">
-        <label for="num1" class="n1">21</label>
-        <input name="numero" id="num2" type="radio" disabled="disabled">
-        <label for="num2" class="n2">22</label>
-        <input name="numero" id="num3" type="radio">
-        <label for="num3" class="n3">23</label>
-        <input name="numero" id="num4" type="radio">
-        <label for="num4" class="n4">24</label>
-        <input name="numero" id="num5" type="radio">
-        <label for="num5" class="n5">25</label>
-        <input name="numero" id="num6" type="radio">
-        <label for="num6" class="n6">26</label>
-        <input name="numero" id="num7" type="radio">
-        <label for="num7" class="n7">27</label>
+        @foreach (var s in (List<SelectListItem>)@ViewBag.SizeList) {
+            <input name="sizeId" id="num @s.Value" type="radio" disabled="@(s.Disabled ? "disabled" : null)">
+            <label for="num @s.Value" class="n1">@s.Text</label>
+        }
+        
     </span>
     </span>
     </span>
 
+
     <hr>
-@if (Model.ProductVariants.Any()) {
+
         <h2>Skladem</h2>
         <span class="items">
             <p class="cena2">@(Math.Round(Model.BasePrice + (Model.BasePrice * (Model.DPH??0m)))) Kč</p>
-            <span><p class="cena">@(Math.Round((Model.BasePrice + (Model.BasePrice * (Model.DPH??0m))) * (1 - (Model.DiscountPercent??0m)))) Kč</p><a class="dokosiku" href="Order"><img src="~/img/kosik_white.png"><p class="short">Do košíku</p><p class="long">Přidat do košíku</p></a></span>
+            <span><p class="cena">@(Math.Round((Model.BasePrice + (Model.BasePrice * (Model.DPH??0m))) * (1 - (Model.DiscountPercent??0m)))) Kč</p><button class="dokosiku" type="submit"><img src="~/img/kosik_white.png"><p class="short">Do košíku</p><p class="long">Přidat do košíku</p></button></span>
         </span>
     }
 else {
-    <h2 style="color: #ff0000">NENÍ SKLADEM</h2>
+    <h2 style="color: #bdbdbd">NENÍ SKLADEM :(</h2>
 }
 </span>
         </span>

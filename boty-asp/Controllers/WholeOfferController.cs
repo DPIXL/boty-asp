@@ -11,7 +11,7 @@ public class WholeOfferController : Controller {
     MyContext _context = new MyContext();
     
     // GET
-    public IActionResult Index(int? catId, int? colId, int? sizeId, int? minPrice, int? maxPrice) {
+    public IActionResult Index(int? catId, int? colId, int? sizeId) {
 
         var products = _context.Products
             .Include(p => p.ProductVariants).ThenInclude(pv => pv.Color)
