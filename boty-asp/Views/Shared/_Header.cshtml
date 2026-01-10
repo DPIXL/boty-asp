@@ -8,10 +8,10 @@
     <span class="headertext">
         <img class="hideonmobile" src="~/img/8.png"><a href="tel:+420777666555"><p class="hideonmobile">+420&nbsp</p><p>777 666 555</p></a><p class="divider">&nbsp|&nbsp</p><a class="emaillink" href="_blank"> info@nejlepsiboty.cz</a>
     </span>
-    <span>
-        @if (User.IsInRole("2") || User.IsInRole("3")) {
-            <a asp-area="Admin" asp-controller="Home" asp-action="Index">Administration</a>
+    @if (User.IsInRole("2") || User.IsInRole("3")) {
+            <a class="adminbutton" asp-area="Admin" asp-controller="Home" asp-action="Index">Administration</a>
         }
+    <span>
         <a asp-controller="Login" asp-action=@a><img class="userpic" src="~/img/profile-user.png">
         @if (!User.Identity.IsAuthenticated) {
             <p class="hideonmobile">Přihlásit se</p>
