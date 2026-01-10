@@ -1,10 +1,13 @@
 using boty_asp.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using NuGet.ProjectModel;
 
 namespace boty_asp.Areas.Admin.Controllers;
+
+[Authorize(Policy = "AdminAccess")]
 
 public class ProductVariantAdminController : Controller {
     

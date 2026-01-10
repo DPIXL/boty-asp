@@ -1,3 +1,5 @@
+using Microsoft.AspNetCore.Authentication.Cookies;
+
 namespace boty_asp;
 
 public class Program
@@ -8,6 +10,25 @@ public class Program
 
         // Add services to the container.
         builder.Services.AddControllersWithViews();
+        
+        builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
+            .AddCookie(options => {
+                // If a user tries to access a restricted page, send them here
+                options.LoginPath = "/Account/Login";
+                // Optional: Expire session after 60 minutes
+                options.ExpireTimeSpan = TimeSpan.FromMinutes(60); 
+            });
+
+        builder.Services.AddAuthorization(options => {
+            options.AddPolicy("MustBeAdmin", policy => 
+                policy.RequireClaim(System.Security.Claims.ClaimTypes.Role, "2"));
+            
+            options.AddPolicy("MustBeSuperUser", policy => 
+                policy.RequireClaim(System.Security.Claims.ClaimTypes.Role, "3"));
+
+            options.AddPolicy("AdminAccess", policy =>
+                policy.RequireClaim(System.Security.Claims.ClaimTypes.Role, "2", "3"));
+        });
 
         var app = builder.Build();
 
@@ -21,10 +42,10 @@ public class Program
 
         app.UseHttpsRedirection();
         app.UseRouting();
-
-        app.UseAuthorization();
+        
         app.UseAuthentication();
-
+        app.UseAuthorization();
+        
         app.MapStaticAssets();
         
         app.MapControllerRoute(

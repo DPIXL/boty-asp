@@ -2,4 +2,20 @@
     ViewData["Title"] = "Login";
     Layout = "~/Views/Shared/_LoginLayout.cshtml";
 }
-
+<form asp-action="SignIn">
+<div class="logincard">
+    <h1>Přihlásit se</h1>
+    <p class="error">@ViewBag.Error</p>
+    <label>Uživatelské jméno</label>
+    <input type="text" name="username" required="required" value=@ViewBag.Username>
+    <label>Heslo</label>
+    <input type="text" name="password" required="required">
+    
+    <p>Nemáte účet? <a href="">Zaregistrujte se!</a></p>
+    
+    <span class="buttons">
+    <a class="button" id="home" asp-controller="Home" asp-action="Index">Domů</a>
+    <button class="button" type="submit">Pokračovat</button>
+    </span>
+</div>
+</form>

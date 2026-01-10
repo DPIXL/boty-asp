@@ -1,0 +1,17 @@
+using Microsoft.AspNetCore.Identity;
+
+namespace boty_asp.HelperClasses;
+
+public class HashHelper {
+    // Hash helper
+    private static readonly PasswordHasher<object> hasher = new PasswordHasher<object>();
+
+    public static string Hash(string password) {
+        return hasher.HashPassword(null, password);
+    }
+
+    public static bool Verify(string password, string hashedPassword) {
+        var result = hasher.VerifyHashedPassword(null, hashedPassword, password);
+        return result == PasswordVerificationResult.Success;
+    }
+}

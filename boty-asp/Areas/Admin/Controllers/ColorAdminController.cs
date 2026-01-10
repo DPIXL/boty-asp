@@ -1,9 +1,11 @@
 using boty_asp.Areas.Admin.ViewModels;
 using boty_asp.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
 namespace boty_asp.Areas.Admin.Controllers;
+[Authorize(Policy = "AdminAccess")]
 
 public class ColorAdminController : Controller {
     // GET
