@@ -689,10 +689,11 @@ C:/Users/patejdlstepan/RiderProjects/boty-asp/boty-asp/bin/Debug/net9.0/runtimes
 /home/dedpixl/RiderProjects/boty-asp/boty-asp/bin/Debug/net9.0/runtimes/win-x64/native/krb5_64.dll
 /home/dedpixl/RiderProjects/boty-asp/boty-asp/bin/Debug/net9.0/runtimes/win-x64/native/krbcc64.dll
 /home/dedpixl/RiderProjects/boty-asp/boty-asp/obj/Debug/net9.0/scopedcss/Areas/Admin/Views/Shared/_Layout.cshtml.rz.scp.css
-/home/dedpixl/RiderProjects/boty-asp/boty-asp/obj/Debug/net9.0/compressed/4r2sjeq02z-o37mw4lwya.gz
-/home/dedpixl/RiderProjects/boty-asp/boty-asp/obj/Debug/net9.0/compressed/d3d2x74yyj-o37mw4lwya.gz
 C:/Users/PATEJDLSTEPAN/RiderProjects/boty-asp/boty-asp/obj/Debug/net9.0/scopedcss/Areas/Admin/Views/Shared/_Layout.cshtml.rz.scp.css
 C:/Users/PATEJDLSTEPAN/RiderProjects/boty-asp/boty-asp/obj/Debug/net9.0/compressed/4r2sjeq02z-zzxcpbtj5i.gz
 C:/Users/PATEJDLSTEPAN/RiderProjects/boty-asp/boty-asp/obj/Debug/net9.0/compressed/d3d2x74yyj-zzxcpbtj5i.gz
 C:/Users/patejdlstepan/RiderProjects/boty-asp/boty-asp/obj/Debug/net9.0/compressed/o0hlj5t41r-s3ickvym3s.gz
-/home/dedpixl/RiderProjects/boty-asp/boty-asp/obj/Debug/net9.0/compressed/o0hlj5t41r-4u3i427n4k.gz
+/home/dedpixl/RiderProjects/boty-asp/boty-asp/obj/Debug/net9.0/scopedcss/Views/Shared/_LoginLayout.cshtml.rz.scp.css
+/home/dedpixl/RiderProjects/boty-asp/boty-asp/obj/Debug/net9.0/compressed/o0hlj5t41r-35xrafy8f9.gz
+/home/dedpixl/RiderProjects/boty-asp/boty-asp/obj/Debug/net9.0/compressed/4r2sjeq02z-9s6g7mkcv9.gz
+/home/dedpixl/RiderProjects/boty-asp/boty-asp/obj/Debug/net9.0/compressed/d3d2x74yyj-9s6g7mkcv9.gz

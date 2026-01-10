@@ -87,6 +87,7 @@
     <ItemGroup>
       <AdditionalFiles Include="Areas\Admin\Views\ProductVariantAdmin\Delete.cshtml" />
       <AdditionalFiles Include="Areas\Admin\Views\ProductVariantAdmin\Index.cshtml" />
+      <AdditionalFiles Include="Views\Login\Index.cshtml" />
     </ItemGroup>
 
 </Project>
