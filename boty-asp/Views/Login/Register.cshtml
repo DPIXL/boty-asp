@@ -1,21 +1,21 @@
-﻿@model boty_asp.ViewModels.LoginViewModel
+﻿@model boty_asp.ViewModels.RegisterViewModel;
 @{
-    ViewData["Title"] = "Login";
+    ViewData["Title"] = "Sign Up";
     Layout = "~/Views/Shared/_LoginLayout.cshtml";
 }
-<form asp-action="SignIn">
+<form asp-action="SignUp">
     <div class="logincard">
-        <h1>Přihlásit se</h1>
+        <h1>Registrace</h1>
         <label>Uživatelské jméno</label>
         <input type="text" asp-for="Username" required="required">
         <label>Heslo</label>
-        <input type="password" asp-for="Password" required="required">
+        <input type="text" asp-for="Password" required="required">
+        <label>Potvrďte Heslo</label>
+        <input type="text" asp-for="ConfirmPassword" required="required">
         <div asp-validation-summary="All"></div>
     
-        <p>Nemáte účet? <a asp-controller="Login" asp-action="Register">Zaregistrujte se!</a></p>
-    
         <span class="buttons">
-            <a class="button" id="home" asp-controller="Home" asp-action="Index">Domů</a>
+            <a class="button" id="home" asp-controller="Login" asp-action="Index">Zpět</a>
             <button class="button" type="submit">Pokračovat</button>
         </span>
     </div>

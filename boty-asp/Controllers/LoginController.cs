@@ -1,5 +1,6 @@
 using System.Security.Claims;
 using boty_asp.HelperClasses;
+using boty_asp.ViewModels;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Identity;
@@ -21,21 +22,21 @@ public class LoginController : Controller {
     }
 
     [HttpPost]
-    public async Task<IActionResult> SignIn(string username, string password) {
+    public async Task<IActionResult> SignIn(LoginViewModel model) {
         
         var user = await _context.Users
-            .FirstOrDefaultAsync(u => u.Name == username);
+            .FirstOrDefaultAsync(u => u.Name == model.Username);
 
         if (user == null)
         {
-            ViewBag.Error = "Invalid Username";
-            return View("Index");
+            ModelState.AddModelError(string.Empty, "Neplatné uživatelské jméno");
+            return View("Index", model);
         }
 
-        if (!HashHelper.Verify(password, user.Password)) {
-            ViewBag.Error = "Invalid Password";
+        if (!HashHelper.Verify(model.Password, user.Password)) {
+            ModelState.AddModelError(string.Empty, "Neplatné heslo");
             ViewBag.Username = user.Name;
-            return View("Index");
+            return View("Index", model);
         }
         
         var claims = new List<Claim> {
@@ -69,5 +70,27 @@ public class LoginController : Controller {
     {
         await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
         return RedirectToAction("Index", "Home");
+    }
+
+    public IActionResult Register() {
+        
+        if (User.Identity.IsAuthenticated) return RedirectToAction("Index", "Home");
+        return View();
+    }
+
+    public async Task<IActionResult> SignUp(RegisterViewModel model) {
+        Models.User user = new Models.User();
+        user.Name = model.Username;
+        user.Password = HashHelper.Hash(model.Password);
+        user.PermissionId = 1;
+
+        await _context.Users.AddAsync(user);
+        await _context.SaveChangesAsync();
+        
+        return RedirectToAction("RegistrationSuccess", "Login");
+    }
+
+    public IActionResult RegistrationSuccess() {
+        return View();
     }
 }

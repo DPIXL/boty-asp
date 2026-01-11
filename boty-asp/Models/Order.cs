@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Text.Json.Serialization;
 
 namespace boty_asp.Models
 {
@@ -25,7 +26,13 @@ namespace boty_asp.Models
         public decimal TotalPrice { get; set; }
 
         public int Status { get; set; }
-
+        
+        public int? UserId { get; set; }
+        
+        [ForeignKey("UserId")]
+        public User? User { get; set; }
+        
+        [JsonIgnore]
         public virtual ICollection<OrderItem> OrderItems { get; set; } = new List<OrderItem>();
     }
 }

@@ -14,7 +14,7 @@ public class Program
         builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
             .AddCookie(options => {
                 // If a user tries to access a restricted page, send them here
-                options.LoginPath = "/Account/Login";
+                options.LoginPath = "/Login/Index";
                 // Optional: Expire session after 60 minutes
                 options.ExpireTimeSpan = TimeSpan.FromMinutes(60); 
             });
@@ -29,6 +29,16 @@ public class Program
             options.AddPolicy("AdminAccess", policy =>
                 policy.RequireClaim(System.Security.Claims.ClaimTypes.Role, "2", "3"));
         });
+        
+        builder.Services.AddDistributedMemoryCache();
+        builder.Services.AddSession(options =>
+        {
+            options.IdleTimeout = TimeSpan.FromMinutes(30); // Cart expires after 30 mins of inactivity
+            options.Cookie.HttpOnly = true;
+            options.Cookie.IsEssential = true;
+        });
+        
+        builder.Services.AddHttpContextAccessor();
 
         var app = builder.Build();
 
@@ -47,6 +57,8 @@ public class Program
         app.UseAuthorization();
         
         app.MapStaticAssets();
+        
+        app.UseSession();
         
         app.MapControllerRoute(
             name: "areas",

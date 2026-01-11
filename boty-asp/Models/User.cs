@@ -1,5 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Text.Json.Serialization;
 
 namespace boty_asp.Models
 {
@@ -21,5 +22,8 @@ namespace boty_asp.Models
         
         [ForeignKey(nameof(PermissionId))]
         public virtual Permission Permission { get; set; }
+        
+        [JsonIgnore]
+        public virtual ICollection<Order> Orders { get; set; } = new List<Order>();
     }
 }

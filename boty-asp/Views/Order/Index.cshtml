@@ -1,14 +1,25 @@
-
-<span class="path"><a href="Home">Domů</a><p>></p><a class="current" href="Order">Poptávka</a></span>
+@using boty_asp.HelperClasses
+@inject IHttpContextAccessor HttpContextAccessor
 
 <div class="demandcontainer">
 
-<img class="hideonmobile" src="~/img2/child.png" alt="child">
+    <div class="cart">
+        
+        <h1>Váš Košík:</h1>
+        @{
+            var cartCount = HttpContextAccessor.HttpContext.Session.GetObject<List<int>>("Cart")?.Count ?? 0;
+        }
+        
+        <div class="cartItem">
+            
+            
+        </div>
+        
+    </div>
 
 <div class="demand">
 
-    <h1>Poptávkový formulář</h1>
-    <h2>Vyplňte formulář níže a my se Vám ozveme, jakmile to půjde.</h2>
+    <h1>Zadejte Vaše údaje</h1>
 
     <form action="demand.php">
 

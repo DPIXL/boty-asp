@@ -1,66 +1,79 @@
-@model boty_asp.Models.Product
+@model boty_asp.ViewModels.ProductViewModel
 
 <span class="path"><a asp-controller="Home" asp-action="Index">Domů</a><p>></p>
     @for (int i = 0; i < ViewBag.Categories.Count - 1; i++) {
         <a asp-controller="WholeOffer" asp-action="Index" asp-route-catId="@ViewBag.Categories[i].Id">@ViewBag.Categories[i].Name</a><p>></p>
-    }<a class="current" asp-controller="WholeOffer" asp-action="Index" asp-route-catId="@Model.Category.Id">@Model.Category.Name</a></span>
+    }<a class="current" asp-controller="WholeOffer" asp-action="Index" asp-route-catId="@Model.Product.Category.Id">@Model.Product.Category.Name</a></span>
 <div class="product">
     <form asp-action="AddToOrder">
-    <span class="grid">
-        <span>
-    <img src="~/img2/bota1.png" alt="bota">
+        <input type="hidden" asp-for="ProductId"></input>
+        <span class="grid">
+            <span>
+                <img src="~/img2/bota1.png" alt="bota">
 
-    <span class="altproductimages">
-        <a href=""><img src="~/img2/bota2.png" alt="bota"></a>
-        <a href=""><img src="~/img2/bota3.png" alt="bota"></a>
-        <a href=""><img src="~/img2/bota4.png" alt="bota"></a>
-    </span>
+                <span class="altproductimages">
+                    <a href=""><img src="~/img2/bota2.png" alt="bota"></a>
+                    <a href=""><img src="~/img2/bota3.png" alt="bota"></a>
+                    <a href=""><img src="~/img2/bota4.png" alt="bota"></a>
+                </span>
 
             </span>
-<span>
-    <span class="nadpis"><h1>@Model.Name</h1><a asp-controller="Home" asp-action="Index"><img class="bunglogo" src="~/img2/logo.webp" alt="logo"></a></span>
-    <span class="hideonmobile"><p class="popis">@Model.Description</p></span>
+            <span>
+                <span class="nadpis">
+                    <h1>@Model.Product.Name</h1><a asp-controller="Home" asp-action="Index"><img class="bunglogo" src="~/img2/logo.webp" alt="logo"></a></span>
+                <span class="hideonmobile">
+                    <p class="popis">@Model.Product.Description</p></span>
 
-    <!-- separator??  -->
+                <!-- separator??  -->
 
-    <hr>
-    @if (Model.ProductVariants.Any()) {    
-    <span class="properthelper">
-    <span>
-    <h3>Barva</h3>
-    <span class="colors">
-        @foreach (var c in @ViewBag.DistinctColors) {
-            <input name="colId" type="radio" id="color @c.Id" value="@c.Id" onchange="window.location.href = '@Url.Action("Index", new { id = Model.Id })?colorId=' + @c.Id" checked="@(c.Id == ViewBag.SelectedColorId ? "checked" : null)"/>
-            <label style="background-color: @c.HexCode" for="color @c.Id" class="col" ></label>
-        }
+                <hr>
+                @if (Model.Product.ProductVariants.Any()) {
+                    <span class="properthelper">
+                        <span>
+                            <h3>Barva</h3>
+                            <span class="colors">
+                                @foreach (var c in @ViewBag.DistinctColors) {
+                                    <input asp-for="ColorId" type="radio" id="color @c.Id" value="@c.Id" onchange="window.location.href = '@Url.Action("Index", new { id = Model.Product.Id })?colorId=' + @c.Id" checked="@(c.Id == ViewBag.SelectedColorId ? "checked" : null)"/>
+                                    <label style="background-color: @c.HexCode" for="color @c.Id" class="col"></label>
+                                }
 
+                            </span>
+                        </span>
+                        <span>
+                            <h3>Velikost</h3>
+                            <span class="sizes">
+                                @foreach (var s in (List<SelectListItem>)@ViewBag.SizeList) {
+                                    <input asp-for="SizeId" value=@s.Value id="num @s.Value" type="radio" disabled="@(s.Disabled ? "disabled" : null)">
+                                    <label for="num @s.Value" class="n1">@s.Text</label>
+                                }
+
+                            </span>
+                        </span>
+                    </span>
+
+
+                    <hr>
+
+                    <span style="display: flex; flex-direction: row; justify-content: space-between"><h2>Skladem</h2>@if (!ViewBag.AddToOrderState) {
+                        <p style="color: #FF0000; font-weight: bold; margin: 0; align-self: center">@ViewBag.Message</p>
+                    }
+                    else {
+                        <p style="color: #179c17; font-weight: bold; margin: 0; align-self: center" >@ViewBag.Message</p>
+                    }
     </span>
+                    <span class="items">
+                            <p class="cena2">@(Math.Round(Model.Product.BasePrice + (Model.Product.BasePrice * (Model.Product.DPH ?? 0m)))) Kč</p>
+        <span>
+            <p class="cena">@(Math.Round((Model.Product.BasePrice + (Model.Product.BasePrice * (Model.Product.DPH ?? 0m))) * (1 - (Model.Product.DiscountPercent ?? 0m)))) Kč</p>
+            <button class="dokosiku" type="submit"><img src="~/img/kosik_white.png">
+                <p class="short">Do košíku</p>
+                <p class="long">Přidat do košíku</p></button></span>
     </span>
-    <span>
-    <h3>Velikost</h3>
-    <span class="sizes">
-        @foreach (var s in (List<SelectListItem>)@ViewBag.SizeList) {
-            <input name="sizeId" id="num @s.Value" type="radio" disabled="@(s.Disabled ? "disabled" : null)">
-            <label for="num @s.Value" class="n1">@s.Text</label>
-        }
-        
-    </span>
-    </span>
-    </span>
-
-
-    <hr>
-
-        <h2>Skladem</h2>
-        <span class="items">
-            <p class="cena2">@(Math.Round(Model.BasePrice + (Model.BasePrice * (Model.DPH??0m)))) Kč</p>
-            <span><p class="cena">@(Math.Round((Model.BasePrice + (Model.BasePrice * (Model.DPH??0m))) * (1 - (Model.DiscountPercent??0m)))) Kč</p><button class="dokosiku" type="submit"><img src="~/img/kosik_white.png"><p class="short">Do košíku</p><p class="long">Přidat do košíku</p></button></span>
-        </span>
-    }
-else {
-    <h2 style="color: #bdbdbd">NENÍ SKLADEM :(</h2>
-}
-</span>
+                }
+                else {
+                    <h2 style="color: #bdbdbd">NENÍ SKLADEM :(</h2>
+                }
+            </span>
         </span>
     </form>
 

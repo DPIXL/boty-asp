@@ -1,28 +1,26 @@
-@{
-    string a = "Index";
-    if (User.Identity.IsAuthenticated) {
-        a = "Logout";
-    }
-}
 <header class="primaryheader">
     <span class="headertext">
         <img class="hideonmobile" src="~/img/8.png"><a href="tel:+420777666555"><p class="hideonmobile">+420&nbsp</p><p>777 666 555</p></a><p class="divider">&nbsp|&nbsp</p><a class="emaillink" href="_blank"> info@nejlepsiboty.cz</a>
     </span>
-    @if (User.IsInRole("2") || User.IsInRole("3")) {
-            <a class="adminbutton" asp-area="Admin" asp-controller="Home" asp-action="Index">Administration</a>
-        }
     <span>
-        <a asp-controller="Login" asp-action=@a><img class="userpic" src="~/img/profile-user.png">
-        @if (!User.Identity.IsAuthenticated) {
-            <p class="hideonmobile">Přihlásit se</p>
-        } else {
-            <p class="hideonmobile">@User.Identity.Name</p>
+        @if (User.IsInRole("2") || User.IsInRole("3")) {
+            <a class="adminbutton" asp-area="Admin" asp-controller="Home" asp-action="Index">Administrace</a>
         }
-    </a></span>
+            @if (!User.Identity.IsAuthenticated) {
+                <a asp-controller="Login" asp-action="Index"><img class="userpic" src="~/img/profile-user.png" alt="user">
+                <p class="hideonmobile">Přihlásit se</p>
+                </a>
+            }
+            else {
+                <a asp-controller="Login" asp-action="Logout"><img class="userpic" src="~/img/logout.png" alt="logout">
+                </a>
+                <p class="hideonmobile">@User.Identity.Name</p>
+            }
+    </span>
 </header>
 <header class="secondaryheader">
     <div class="upperheaderpart">
-        <a href="Home"><img class="logo" src="~/img/Group 4.svg" alt="logo"></a>
+        <a asp-controller="Home" asp-action="Index"><img class="logo" src="~/img/Group 4.svg" alt="logo"></a>
         <span class="iconsonright">
             <span class="searchbox">
                 <label>
@@ -30,7 +28,7 @@
                     <input class="hideonmobile" type="text" placeholder="Vyhledat zboží...">
                 </label>
             </span>
-            <a href="Order"><img src="/img/Group 6.png"></a><a href=""><img src="~/img/heart.png"></a>
+            <a asp-controller="Order" asp-action="Index"><img src="/img/Group 6.png"></a><a href=""><img src="~/img/heart.png"></a>
         </span>
     </div>
     <nav class="mainnav">

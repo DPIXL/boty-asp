@@ -1,0 +1,13 @@
+﻿@{
+    ViewData["Title"] = "Login";
+    Layout = "~/Views/Shared/_LoginLayout.cshtml";
+}
+    <div class="logincard">
+        <h1>Registrace byla úspěšná!</h1>
+        <p>Nyní se můžete přihlásit.</p>
+        
+        <span class="buttons">
+            <a class="button" id="home" asp-controller="Home" asp-action="Index">Domů</a>
+            <a class="button" asp-controller="Login" asp-action="Index"> Přihlásit se</a>
+        </span>
+    </div>
