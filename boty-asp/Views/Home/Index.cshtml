@@ -35,7 +35,7 @@
     <section class="items">
         @foreach(var item in Model) {
             <a asp-controller="Product" asp-action="Index" asp-route-id="@item.Id">
-                <img src="@(Url.Content(item.ImagesPath) + "/0.png")" alt="boty">
+                <img src="@item.ImagesPath" asp-append-version="true" alt="boty">
                 <p>@item.Name</p>
                 <span class="bottom">
                     <span class="bottomtext">

@@ -19,6 +19,10 @@
         <a class="@navstyle" asp-area="Admin" asp-controller="ProductAdmin" asp-action="Index">Products</a>
         <a class="@navstyle" asp-area="Admin" asp-controller="CategoryAdmin" asp-action="Index">Categories</a>
         <a class="@navstyle" asp-area="Admin" asp-controller="ColorAdmin" asp-action="Index">Colors and Sizes</a>
+        <a class="@navstyle" asp-area="Admin" asp-controller="OrderAdmin" asp-action="Index">Orders</a>
+    @if (User.IsInRole("3")) {
+            <a class="@navstyle" asp-area="Admin" asp-controller="UserAdmin" asp-action="Index">Users</a>
+        }
     </div>
 </nav>
 

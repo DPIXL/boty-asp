@@ -696,4 +696,4 @@ C:/Users/patejdlstepan/RiderProjects/boty-asp/boty-asp/obj/Debug/net9.0/compress
 /home/dedpixl/RiderProjects/boty-asp/boty-asp/obj/Debug/net9.0/scopedcss/Views/Shared/_LoginLayout.cshtml.rz.scp.css
 /home/dedpixl/RiderProjects/boty-asp/boty-asp/obj/Debug/net9.0/compressed/4r2sjeq02z-9s6g7mkcv9.gz
 /home/dedpixl/RiderProjects/boty-asp/boty-asp/obj/Debug/net9.0/compressed/d3d2x74yyj-9s6g7mkcv9.gz
-/home/dedpixl/RiderProjects/boty-asp/boty-asp/obj/Debug/net9.0/compressed/o0hlj5t41r-3l2ar1d5hl.gz
+/home/dedpixl/RiderProjects/boty-asp/boty-asp/obj/Debug/net9.0/compressed/o0hlj5t41r-vqppbwfuei.gz

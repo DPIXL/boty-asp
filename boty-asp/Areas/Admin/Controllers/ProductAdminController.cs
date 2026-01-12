@@ -1,3 +1,4 @@
+using boty_asp.Areas.Admin.ViewModels;
 using boty_asp.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -54,6 +55,21 @@ public class ProductAdminController : Controller {
     
         if (product != null)
         {
+            string oldPathRelative = product.ImagesPath;
+
+            if (!string.IsNullOrEmpty(oldPathRelative) && !oldPathRelative.Contains("0.png"))
+            {
+
+                string fileName = Path.GetFileName(oldPathRelative);
+                
+                string oldPathPhysical = Path.Combine(_webHostEnvironment.WebRootPath, "dbimg", fileName);
+                
+                if (System.IO.File.Exists(oldPathPhysical))
+                {
+                    System.IO.File.Delete(oldPathPhysical);
+                }
+            }
+            
             _context.Products.Remove(product); 
             _context.SaveChanges();
         }
@@ -69,9 +85,29 @@ public class ProductAdminController : Controller {
 
     [Area("Admin")]
     [HttpPost, ActionName("Create")]
-    public async Task<IActionResult> CreateToDb(Product product) {
-        product.ImagesPath = $"~/dbimg/0"; //REMOVE LATER - TEMPORARY
-        _context.Products.Add(product);
+    public async Task<IActionResult> CreateToDb(ProductViewModel pwm) {
+        
+        if (pwm.ImageUpload != null)
+        {
+            
+            string folderPath = Path.Combine(_webHostEnvironment.WebRootPath, "dbimg");
+            
+            string uniqueName = Guid.NewGuid().ToString() + ".png";
+            
+            string fullPhysicalPath = Path.Combine(folderPath, uniqueName);
+            
+            using (var fileStream = new FileStream(fullPhysicalPath, FileMode.Create))
+            {
+                await pwm.ImageUpload.CopyToAsync(fileStream);
+            }
+            
+            pwm.Product.ImagesPath = "~/dbimg/" + uniqueName;
+        }
+        else {
+            pwm.Product.ImagesPath = "~/dbimg/0.png";
+        }
+        
+        _context.Products.Add(pwm.Product);
         await _context.SaveChangesAsync();
         return RedirectToAction(nameof(Index));
     }
@@ -80,14 +116,47 @@ public class ProductAdminController : Controller {
     public IActionResult Edit(int? id) {
         ViewBag.Categories = new SelectList(_context.Categories, "Id", "Name");
         var product = _context.Products.Find(id);
-        return View(product);
+        ProductViewModel productViewModel = new ProductViewModel();
+        productViewModel.Product = product;
+        return View(productViewModel);
     }
 
     [Area("Admin")]
     [HttpPost, ActionName("Edit")]
-    public async Task<IActionResult> EditToDb(Product product) {
-        product.ImagesPath =  $"~/dbimg/0"; //REMOVE THIS WHEN U IMPLEMENT IMAGE UPLOAD
-        _context.Products.Update(product);
+    public async Task<IActionResult> EditToDb(ProductViewModel pwm) {
+        
+        if (pwm.ImageUpload != null)
+        {
+            string oldPathRelative = pwm.Product.ImagesPath;
+
+            if (!string.IsNullOrEmpty(oldPathRelative) && !oldPathRelative.Contains("0.png"))
+            {
+
+                string fileName = Path.GetFileName(oldPathRelative);
+                
+                string oldPathPhysical = Path.Combine(_webHostEnvironment.WebRootPath, "dbimg", fileName);
+                
+                if (System.IO.File.Exists(oldPathPhysical))
+                {
+                    System.IO.File.Delete(oldPathPhysical);
+                }
+            }
+            
+            
+            string folderPath = Path.Combine(_webHostEnvironment.WebRootPath, "dbimg");
+            
+            string uniqueName = Guid.NewGuid().ToString() + ".png";
+            
+            string fullPhysicalPath = Path.Combine(folderPath, uniqueName);
+            
+            using (var fileStream = new FileStream(fullPhysicalPath, FileMode.Create)) {
+                await pwm.ImageUpload.CopyToAsync(fileStream);
+            }
+            
+            pwm.Product.ImagesPath = "~/dbimg/" + uniqueName;
+        }
+        
+        _context.Products.Update(pwm.Product);
         await _context.SaveChangesAsync();
         return RedirectToAction(nameof(Index));
     }

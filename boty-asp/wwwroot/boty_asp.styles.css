@@ -662,6 +662,11 @@ p {
 
 
 .demandcontainer {
+  
+  gap: 30px;
+  
+  margin-bottom: 100px;
+  
   h1 {
     font-size: 30px;
     color: #304068;
@@ -682,132 +687,182 @@ p {
     display: flex;
     border-radius: 0.7rem;
     border: solid 1px #b5bfd5;
+    
+    margin-bottom: 10px;
+    
+    padding: 10px;
+    
+    input {
+      height: 20px;
+      width: 35px;
+      
+      align-self: center;
+      margin-left: auto;
+      
+      padding-left: 15px;
+
+      border-radius: 0.7rem;
+      border: solid 1px #b5bfd5;
+    }
+    
+    a {
+      
+      margin: 0;
+      
+      display: flex;
+      
+      align-items: center;
+      
+      img {
+        margin: 0;
+        margin-left: 10px;
+        display: block;
+        width: 30px;
+        height: auto;
+      }
+    }
+    
+    img {
+      margin-right: 20px;
+      height: 50px;
+      width: auto;
+    }
+    
+    h1 {
+      margin: 0;
+    }
+    
+    p {
+      margin: 0;
+      margin-right: 20px;
+      color: #9aa4ba;
+    }
   }
 }
 
 .demand {
-  padding: 12px 8px;
+  padding: 0;
 
   form {
 
     display: flex;
     flex-direction: column;
 
-    label {
+  }
+
+  label {
+    display: flex;
+    flex-direction: column;
+    color: #304068;
+  }
+
+  input {
+
+    display: flex;
+
+    border: 1px solid #b5bfd5;
+
+    background-color: white;
+    padding: 10px 15px;
+    margin-bottom: 15px;
+
+    border-radius: 0.7rem;
+
+  }
+
+  input:focus {
+    outline: none;
+  }
+
+  input::placeholder {
+    color: #b4bed5;
+  }
+
+  select {
+    display: flex;
+
+    border: 1px solid #b5bfd5;
+
+    background-color: white;
+    padding: 10px 15px;
+    margin-bottom: 15px;
+
+    border-radius: 1.5rem;
+    transition: 0.3s ease;
+  }
+
+  select:hover {
+    border-radius: 0.7rem;
+  }
+
+  select:required:invalid {
+    color: #b4bed5;
+  }
+
+  select option {
+    color: black;
+  }
+
+  select:focus {
+    outline: none;
+  }
+
+  option:disabled {
+    color: #b4bed5;
+  }
+
+  p {
+    color: #304068;
+  }
+
+  .radiospan {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    span {
       display: flex;
-      flex-direction: column;
-      color: #304068;
+      gap: 5px;
     }
+  }
 
-    input {
+  .buttons {
 
-      display: flex;
+    display: flex;
+    flex-direction: row;
 
-      border: 1px solid #b5bfd5;
+    justify-content: space-between;
 
-      background-color: white;
-      padding: 10px 15px;
-      margin-bottom: 15px;
-      
-      border-radius: 0.7rem;
-      
-    }
+    button {
+      color: white;
+      border: 1px solid #c7232f;
+      padding: 15px 15px;
 
-    input:focus {
-      outline: none;
-    }
-
-    input::placeholder {
-      color: #b4bed5;
-    }
-
-    select {
-      display: flex;
-
-      border: 1px solid #b5bfd5;
-
-      background-color: white;
-      padding: 10px 15px;
-      margin-bottom: 15px;
-      
       border-radius: 1.5rem;
+
       transition: 0.3s ease;
     }
-    
-    select:hover {
+
+    button:hover {
+      cursor: pointer;
+      text-decoration: underline;
       border-radius: 0.7rem;
     }
 
-    select:required:invalid {
-      color: #b4bed5;
-    }
 
-    select option {
-      color: black;
-    }
-
-    select:focus {
-      outline: none;
-    }
-
-    option:disabled {
-      color: #b4bed5;
-    }
-
-    p {
+    .back {
+      background-color: white;
       color: #304068;
     }
 
-    .radiospan {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-
-      span {
-        display: flex;
-        gap: 5px;
-      }
+    .submit {
+      background-color: #c7232f;
+      color: white;
+      font-weight: bold;
     }
 
-    .buttons {
-
-      display: flex;
-      flex-direction: row;
-
-      justify-content: space-between;
-
-      button {
-        color: white;
-        border: 1px solid #c7232f;
-        padding: 15px 15px;
-        
-        border-radius: 1.5rem;
-        
-        transition: 0.3s ease;
-      }
-
-      button:hover {
-        cursor: pointer;
-        text-decoration: underline;
-        border-radius: 0.7rem;
-      }
-
-
-      .back {
-        background-color: white;
-        color: #304068;
-      }
-
-      .submit {
-        background-color: #c7232f;
-        color: white;
-        font-weight: bold;
-      }
-
-      .submit:hover {
-        background-color: #81161d;
-      }
+    .submit:hover {
+      background-color: #81161d;
     }
-
   }
 }
 
@@ -1461,8 +1516,6 @@ p {
     grid-template-columns: 1fr 1fr;
 
     padding: 20px 120px;
-
-    gap: 20px;
 
     img {
       max-width: 100%;

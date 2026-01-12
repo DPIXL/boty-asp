@@ -70,6 +70,10 @@
       <_ContentIncludedByDefault Remove="wwwroot\css\img2\Thumbs.db" />
       <_ContentIncludedByDefault Remove="wwwroot\css\site.css" />
       <_ContentIncludedByDefault Remove="Areas\Admin\Views\SizeAdmin\Index.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Admin\Views\OrderAdmin\Create.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Admin\Views\OrderAdmin\Delete.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Admin\Views\OrderAdmin\Edit.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Admin\Views\OrderAdmin\Index.cshtml" />
     </ItemGroup>
 
     <ItemGroup>
@@ -80,7 +84,6 @@
     <ItemGroup>
       <Folder Include="Areas\Admin\Data\" />
       <Folder Include="Areas\Admin\Models\" />
-      <Folder Include="wwwroot\dbimg\0\" />
     </ItemGroup>
 
     <ItemGroup>

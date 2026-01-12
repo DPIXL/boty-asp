@@ -15,6 +15,9 @@ namespace boty_asp.Models
 
         [Required]
         public string CustomerName { get; set; }
+        
+        [Required]
+        public string CustomerSurname { get; set; }
 
         [Required]
         public string CustomerEmail { get; set; }
@@ -33,6 +36,6 @@ namespace boty_asp.Models
         public User? User { get; set; }
         
         [JsonIgnore]
-        public virtual ICollection<OrderItem> OrderItems { get; set; } = new List<OrderItem>();
+        public virtual List<OrderItem> OrderItems { get; set; } = new List<OrderItem>();
     }
 }

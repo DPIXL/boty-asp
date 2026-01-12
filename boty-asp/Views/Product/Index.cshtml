@@ -9,13 +9,7 @@
         <input type="hidden" asp-for="ProductId"></input>
         <span class="grid">
             <span>
-                <img src="~/img2/bota1.png" alt="bota">
-
-                <span class="altproductimages">
-                    <a href=""><img src="~/img2/bota2.png" alt="bota"></a>
-                    <a href=""><img src="~/img2/bota3.png" alt="bota"></a>
-                    <a href=""><img src="~/img2/bota4.png" alt="bota"></a>
-                </span>
+                <img src="@Model.Product.ImagesPath" asp-append-version="true" alt="bota">
 
             </span>
             <span>
@@ -130,7 +124,7 @@
         <section class="items">
             @foreach(var item in ViewBag.Recommended) {
                 <a asp-controller="Product" asp-action="Index" asp-route-id="@item.Id">
-                    <img src="@(Url.Content(item.ImagesPath) + "/0.png")" alt="boty">
+                    <img src="@item.ImagesPath" asp-append-version="true" alt="boty">
                     <p>@item.Name</p>
                     <span class="bottom">
                         <span class="bottomtext">

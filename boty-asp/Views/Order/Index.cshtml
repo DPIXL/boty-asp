@@ -1,75 +1,75 @@
-@using boty_asp.HelperClasses
-@inject IHttpContextAccessor HttpContextAccessor
+@model boty_asp.Models.Order
 
+<form asp-action="SendOrder">
 <div class="demandcontainer">
-
     <div class="cart">
         
         <h1>Váš Košík:</h1>
-        @{
-            var cartCount = HttpContextAccessor.HttpContext.Session.GetObject<List<int>>("Cart")?.Count ?? 0;
-        }
         
-        <div class="cartItem">
-            
-            
-        </div>
+        @for (int i = 0; i < Model.OrderItems.Count; i++) {
+            <div class="cartItem">
+                <img class="itemimg" alt="item" 
+                     src="@Model.OrderItems[i].ProductVariant.Product.ImagesPath" 
+                     asp-append-version="true">
+             
+                <span>
+                    <h1 style="font-size: 20px">@Model.OrderItems[i].ProductVariant.Product.Name</h1>
+                    <span style="display: flex; flex-direction: row;">
+                        <p>Barva: @Model.OrderItems[i].ProductVariant.Color.Name</p>
+                        <p>Velikost: @Model.OrderItems[i].ProductVariant.Size.SizeValue</p>
+                    </span>
+                </span>
+
+                <input type="number" min="1" 
+                       asp-for="OrderItems[i].Quantity" 
+                       style="margin-left: auto; align-self: center;" />
+                
+                <input type="hidden" asp-for="OrderItems[i].UnitPrice" />
+                <input type="hidden" asp-for="OrderItems[i].ProductVariantId" />
+                <input type="hidden" asp-for="OrderItems[i].Id" />
+
+                <a class="removeitem" 
+                   asp-controller="Order" 
+                   asp-action="RemoveItem" 
+                   asp-route-pvId="@Model.OrderItems[i].ProductVariant.Id">
+                    <img alt="remove" src="~/img/trash.png"/>
+                </a>
+            </div>
+        }
         
     </div>
 
-<div class="demand">
+    <div class="demand">
 
-    <h1>Zadejte Vaše údaje</h1>
+        <h1>Zadejte Vaše údaje</h1>
 
-    <form action="demand.php">
+        
 
         <span class="jmenoprijmeni">
-        <label>
-            Jméno
-            <input id="name" name="jmeno" type="text" required placeholder="Zadejte své jméno...">
-        </label>
-        <label>
-            Příjmení
-            <input id="surname" name="prijmeni" type="text" required placeholder="Zadejte své příjmení...">
-        </label>
+            <label>
+                Jméno
+                <input asp-for="CustomerName" type="text" required placeholder="Zadejte své jméno...">
+            </label>
+            <label>
+                Příjmení
+                <input asp-for="CustomerSurname" type="text" required placeholder="Zadejte své příjmení...">
+            </label>
         </span>
         <label>
             E-mail
-            <input id="mail" name="email" type="email" required placeholder="Zadejte svůj e-mail...">
+            <input asp-for="CustomerEmail" type="email" required placeholder="Zadejte svůj e-mail...">
         </label>
         <label>
-            Telefon
-            <input id="phone" name="telefon" type="tel" pattern="^\+((?:9[679]|8[035789]|6[789]|5[90]|42|3[578]|2[1-689])|9[0-58]|8[1246]|6[0-6]|5[1-8]|4[013-9]|3[0-469]|2[70]|7|1)(?:\W*\d){0,13}\d$" required placeholder="Zadejte svůj telefon...">
+            Adresa
+            <input asp-for="CustomerAddress" type="text" required placeholder="Zadejte svou adresu...">
         </label>
-        <label>
-            Země
-            <select id="zem" name="zeme" required>
-                <option value="" disabled selected hidden>Vyber zemi</option>
-                <option value="ČR">Česko</option>
-                <option value="SR">Maďarsko</option>
-            </select>
-        </label>
-        <p>Způsob platby</p>
-        <span class="radiospan">
-            <span>
-            <input id="radio1" name="platba" type="radio" required value="Hotove">
-            <label for="radio1">Hotově</label>
-                </span>
-            <span>
-            <input id="radio2" name="platba" type="radio" required value="Prevodem">
-            <label for="radio2">Převodem</label>
-                </span>
-            <span>
-            <input id="radio3" name="platba" type="radio" required value="Kartou">
-            <label for="radio3">Kartou</label>
-                </span>
-        </span>
 
         <span class="buttons">
-        <a href="Home"><button class="back" type="button">Zpět</button></a>
-        <button class="submit" type="submit">Pokračovat</button>
-    </span>
-    </form>
+            <a href="/"><button class="back" type="button">Zpět</button></a>
+            <button class="submit" type="submit">Pokračovat</button>
+        </span>
+        
 
+    </div>
 </div>
-</div>
+</form>
