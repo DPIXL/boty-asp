@@ -2,3 +2,9 @@
 // for details on configuring this project to bundle and minify static web assets.
 
 // Write your JavaScript code.
+
+const cenakomplet = document.querySelector('.cenakomplet');
+const ceny = document.querySelector('.cena');
+
+let komplet = 0;
+

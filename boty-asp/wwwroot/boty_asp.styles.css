@@ -682,6 +682,12 @@ p {
 .cart {
   display: flex;
   flex-direction: column;
+
+  .cenakomplet {
+    color: #C62832;
+    font-weight: bold;
+    margin-left: auto;
+  }
   
   .cartItem {
     display: flex;
@@ -692,12 +698,22 @@ p {
     
     padding: 10px;
     
+    .cena {
+      color: #C62832;
+      
+      font-weight: bold;
+      
+      margin-left: auto;
+      
+      align-self: center;
+    }
+    
     input {
       height: 20px;
       width: 35px;
       
       align-self: center;
-      margin-left: auto;
+      margin-left: 10px;
       
       padding-left: 15px;
 

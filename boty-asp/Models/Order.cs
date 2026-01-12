@@ -37,5 +37,7 @@ namespace boty_asp.Models
         
         [JsonIgnore]
         public virtual List<OrderItem> OrderItems { get; set; } = new List<OrderItem>();
+
+        public decimal Total => OrderItems.Sum(x => x.UnitPrice * x.Quantity);
     }
 }

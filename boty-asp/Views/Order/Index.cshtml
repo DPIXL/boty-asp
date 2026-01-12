@@ -1,75 +1,79 @@
 @model boty_asp.Models.Order
 
 <form asp-action="SendOrder">
-<div class="demandcontainer">
-    <div class="cart">
+    <div class="demandcontainer">
+        <div class="cart">
         
-        <h1>Váš Košík:</h1>
+            <h1>Váš Košík:</h1>
         
-        @for (int i = 0; i < Model.OrderItems.Count; i++) {
-            <div class="cartItem">
-                <img class="itemimg" alt="item" 
-                     src="@Model.OrderItems[i].ProductVariant.Product.ImagesPath" 
-                     asp-append-version="true">
+            @for (int i = 0; i < Model.OrderItems.Count; i++) {
+                <div class="cartItem">
+                    <img class="itemimg" alt="item" 
+                         src="@Model.OrderItems[i].ProductVariant.Product.ImagesPath" 
+                         asp-append-version="true">
              
-                <span>
-                    <h1 style="font-size: 20px">@Model.OrderItems[i].ProductVariant.Product.Name</h1>
-                    <span style="display: flex; flex-direction: row;">
-                        <p>Barva: @Model.OrderItems[i].ProductVariant.Color.Name</p>
-                        <p>Velikost: @Model.OrderItems[i].ProductVariant.Size.SizeValue</p>
+                    <span>
+                        <h1 style="font-size: 20px">@Model.OrderItems[i].ProductVariant.Product.Name</h1>
+                        <span style="display: flex; flex-direction: row;">
+                            <p>Barva: @Model.OrderItems[i].ProductVariant.Color.Name</p>
+                            <p>Velikost: @Model.OrderItems[i].ProductVariant.Size.SizeValue</p>
+                        </span>
                     </span>
-                </span>
-
-                <input type="number" min="1" 
-                       asp-for="OrderItems[i].Quantity" 
-                       style="margin-left: auto; align-self: center;" />
                 
-                <input type="hidden" asp-for="OrderItems[i].UnitPrice" />
-                <input type="hidden" asp-for="OrderItems[i].ProductVariantId" />
-                <input type="hidden" asp-for="OrderItems[i].Id" />
+                    <p class="cena">@(Model.OrderItems[i].UnitPrice) Kč</p>
 
-                <a class="removeitem" 
-                   asp-controller="Order" 
-                   asp-action="RemoveItem" 
-                   asp-route-pvId="@Model.OrderItems[i].ProductVariant.Id">
-                    <img alt="remove" src="~/img/trash.png"/>
-                </a>
-            </div>
-        }
+                    <input type="number" min="1" 
+                           asp-for="OrderItems[i].Quantity" 
+                           style="align-self: center;"/>
+                
+                    <input type="hidden" asp-for="OrderItems[i].UnitPrice" />
+                    <input type="hidden" asp-for="OrderItems[i].ProductVariantId" />
+                    <input type="hidden" asp-for="OrderItems[i].Id" />
+
+                    <a class="removeitem" 
+                       asp-controller="Order" 
+                       asp-action="RemoveItem" 
+                       asp-route-pvId="@Model.OrderItems[i].ProductVariant.Id">
+                        <img alt="remove" src="~/img/trash.png"/>
+                    </a>
+                </div>
+            }
         
-    </div>
+            <p class="cenakomplet">Celkem: @(Model.Total) Kč</p>
+        
+        </div>
 
-    <div class="demand">
+        <div class="demand">
 
-        <h1>Zadejte Vaše údaje</h1>
+            <h1>Zadejte Vaše údaje</h1>
 
         
 
-        <span class="jmenoprijmeni">
+            <span class="jmenoprijmeni">
+                <label>
+                    Jméno
+                    <input asp-for="CustomerName" type="text" required placeholder="Zadejte své jméno...">
+                </label>
+                <label>
+                    Příjmení
+                    <input asp-for="CustomerSurname" type="text" required placeholder="Zadejte své příjmení...">
+                </label>
+            </span>
             <label>
-                Jméno
-                <input asp-for="CustomerName" type="text" required placeholder="Zadejte své jméno...">
+                E-mail
+                <input asp-for="CustomerEmail" type="email" required placeholder="Zadejte svůj e-mail...">
             </label>
             <label>
-                Příjmení
-                <input asp-for="CustomerSurname" type="text" required placeholder="Zadejte své příjmení...">
+                Adresa
+                <input asp-for="CustomerAddress" type="text" required placeholder="Zadejte svou adresu...">
             </label>
-        </span>
-        <label>
-            E-mail
-            <input asp-for="CustomerEmail" type="email" required placeholder="Zadejte svůj e-mail...">
-        </label>
-        <label>
-            Adresa
-            <input asp-for="CustomerAddress" type="text" required placeholder="Zadejte svou adresu...">
-        </label>
 
-        <span class="buttons">
-            <a href="/"><button class="back" type="button">Zpět</button></a>
-            <button class="submit" type="submit">Pokračovat</button>
-        </span>
+            <span class="buttons">
+                <a href="/"><button class="back" type="button">Zpět</button></a>
+                <button class="submit" type="submit">Pokračovat</button>
+            </span>
         
 
+        </div>
     </div>
-</div>
 </form>
